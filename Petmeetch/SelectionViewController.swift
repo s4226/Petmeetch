@@ -1,0 +1,41 @@
+//
+//  SelectionViewController.swift
+//  Petmeetch
+//
+//  Created by Peiru Chiu on 2020/8/12.
+//  Copyright © 2020 Peiru Chiu. All rights reserved.
+//
+
+import UIKit
+
+class SelectionViewController: UIViewController {
+    
+
+    @IBAction func AdoptionTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "Adoption", sender: self)
+        
+    }
+    @IBAction func ARTapped(_ sender: Any){
+        self.performSegue(withIdentifier: "AR", sender: self)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    @IBAction func UnWind(for segue:UIStoryboardSegue)
+    {
+        print("unwind...")
+    }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

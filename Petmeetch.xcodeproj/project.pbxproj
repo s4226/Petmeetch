@@ -3,27 +3,91 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39AC69F1F12D521FF2C2D959 /* Pods_Petmeetch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2832F39B7D93C72652528FC /* Pods_Petmeetch.framework */; };
 		F7AE253824E4095700A8C6B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE253724E4095700A8C6B5 /* AppDelegate.swift */; };
 		F7AE253A24E4095700A8C6B5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AE253924E4095700A8C6B5 /* art.scnassets */; };
-		F7AE253C24E4095700A8C6B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE253B24E4095700A8C6B5 /* ViewController.swift */; };
 		F7AE253F24E4095700A8C6B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AE253D24E4095700A8C6B5 /* Main.storyboard */; };
 		F7AE254124E4095800A8C6B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AE254024E4095800A8C6B5 /* Assets.xcassets */; };
 		F7AE254424E4095800A8C6B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AE254224E4095800A8C6B5 /* LaunchScreen.storyboard */; };
+		F7AE254C24E409B500A8C6B5 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE254B24E409B500A8C6B5 /* SelectionViewController.swift */; };
+		F7AE254F24E40BAD00A8C6B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE254E24E40BAD00A8C6B5 /* ViewController.swift */; };
+		F7AE255124E40BF200A8C6B5 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE255024E40BF200A8C6B5 /* ViewController+ARSCNViewDelegate.swift */; };
+		F7AE255324E40C2600A8C6B5 /* ViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE255224E40C2600A8C6B5 /* ViewController+Actions.swift */; };
+		F7AE255524E40C5400A8C6B5 /* ViewController+ObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE255424E40C5400A8C6B5 /* ViewController+ObjectSelection.swift */; };
+		F7AE255724E40CA200A8C6B5 /* ViewController+CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE255624E40CA200A8C6B5 /* ViewController+CoachingOverlay.swift */; };
+		F7AE255924E40CD500A8C6B5 /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE255824E40CD500A8C6B5 /* VirtualObjectInteraction.swift */; };
+		F7AE255B24E40CF400A8C6B5 /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE255A24E40CF400A8C6B5 /* ThresholdPanGesture.swift */; };
+		F7AE255D24E40D1800A8C6B5 /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE255C24E40D1800A8C6B5 /* VirtualObjectARView.swift */; };
+		F7AE256024E40D5700A8C6B5 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE255F24E40D5700A8C6B5 /* VirtualObject.swift */; };
+		F7AE256224E40D7A00A8C6B5 /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE256124E40D7A00A8C6B5 /* VirtualObjectLoader.swift */; };
+		F7AE256524E40DAE00A8C6B5 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE256424E40DAE00A8C6B5 /* FocusSquare.swift */; };
+		F7AE256724E40DD200A8C6B5 /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE256624E40DD200A8C6B5 /* FocusSquareSegment.swift */; };
+		F7AE256A24E40E1800A8C6B5 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE256924E40E1800A8C6B5 /* StatusViewController.swift */; };
+		F7AE256C24E40E3F00A8C6B5 /* VirtualObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE256B24E40E3F00A8C6B5 /* VirtualObjectSelection.swift */; };
+		F7AE256F24E40E7A00A8C6B5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE256E24E40E7A00A8C6B5 /* Utilities.swift */; };
+		F7AE257224E4111200A8C6B5 /* OpenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257124E4111200A8C6B5 /* OpenData.swift */; };
+		F7AE257424E4112D00A8C6B5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257324E4112D00A8C6B5 /* CardView.swift */; };
+		F7AE257724E4115D00A8C6B5 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257524E4115D00A8C6B5 /* AnimalTableViewCell.swift */; };
+		F7AE257824E4115D00A8C6B5 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7AE257624E4115D00A8C6B5 /* AnimalTableViewCell.xib */; };
+		F7AE257A24E4119F00A8C6B5 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257924E4119F00A8C6B5 /* AnimalDetailViewController.swift */; };
+		F7AE257C24E4126100A8C6B5 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257B24E4126100A8C6B5 /* Animal.swift */; };
+		F7AE257F24E4128A00A8C6B5 /* AddresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257D24E4128A00A8C6B5 /* AddresTableViewCell.swift */; };
+		F7AE258024E4128A00A8C6B5 /* AddresTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7AE257E24E4128A00A8C6B5 /* AddresTableViewCell.xib */; };
+		F7AE258324E412B200A8C6B5 /* AnimalDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE258124E412B200A8C6B5 /* AnimalDetailTableViewCell.swift */; };
+		F7AE258424E412B200A8C6B5 /* AnimalDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7AE258224E412B200A8C6B5 /* AnimalDetailTableViewCell.xib */; };
+		F7AE258D24E4132000A8C6B5 /* OtherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE258B24E4132000A8C6B5 /* OtherTableViewCell.swift */; };
+		F7AE258E24E4132000A8C6B5 /* OtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7AE258C24E4132000A8C6B5 /* OtherTableViewCell.xib */; };
+		F7AE259124E4134600A8C6B5 /* RemarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE258F24E4134600A8C6B5 /* RemarkTableViewCell.swift */; };
+		F7AE259224E4134600A8C6B5 /* RemarkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7AE259024E4134600A8C6B5 /* RemarkTableViewCell.xib */; };
+		F7AE259424E4136500A8C6B5 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE259324E4136500A8C6B5 /* AnimalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27ED513E20BCD56C696DF515 /* Pods-Petmeetch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petmeetch.release.xcconfig"; path = "Target Support Files/Pods-Petmeetch/Pods-Petmeetch.release.xcconfig"; sourceTree = "<group>"; };
+		540FB91ABC0AC3FB6FC1C9C6 /* Pods-Petmeetch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petmeetch.debug.xcconfig"; path = "Target Support Files/Pods-Petmeetch/Pods-Petmeetch.debug.xcconfig"; sourceTree = "<group>"; };
+		E2832F39B7D93C72652528FC /* Pods_Petmeetch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petmeetch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AE253424E4095700A8C6B5 /* Petmeetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Petmeetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AE253724E4095700A8C6B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7AE253924E4095700A8C6B5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		F7AE253B24E4095700A8C6B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7AE253E24E4095700A8C6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7AE254024E4095800A8C6B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7AE254324E4095800A8C6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7AE254524E4095800A8C6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7AE254B24E409B500A8C6B5 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		F7AE254E24E40BAD00A8C6B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7AE255024E40BF200A8C6B5 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		F7AE255224E40C2600A8C6B5 /* ViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Actions.swift"; sourceTree = "<group>"; };
+		F7AE255424E40C5400A8C6B5 /* ViewController+ObjectSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ObjectSelection.swift"; sourceTree = "<group>"; };
+		F7AE255624E40CA200A8C6B5 /* ViewController+CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoachingOverlay.swift"; sourceTree = "<group>"; };
+		F7AE255824E40CD500A8C6B5 /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
+		F7AE255A24E40CF400A8C6B5 /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
+		F7AE255C24E40D1800A8C6B5 /* VirtualObjectARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
+		F7AE255F24E40D5700A8C6B5 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		F7AE256124E40D7A00A8C6B5 /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
+		F7AE256424E40DAE00A8C6B5 /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		F7AE256624E40DD200A8C6B5 /* FocusSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		F7AE256924E40E1800A8C6B5 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		F7AE256B24E40E3F00A8C6B5 /* VirtualObjectSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelection.swift; sourceTree = "<group>"; };
+		F7AE256E24E40E7A00A8C6B5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F7AE257124E4111200A8C6B5 /* OpenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenData.swift; sourceTree = "<group>"; };
+		F7AE257324E4112D00A8C6B5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		F7AE257524E4115D00A8C6B5 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
+		F7AE257624E4115D00A8C6B5 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
+		F7AE257924E4119F00A8C6B5 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
+		F7AE257B24E4126100A8C6B5 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		F7AE257D24E4128A00A8C6B5 /* AddresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddresTableViewCell.swift; sourceTree = "<group>"; };
+		F7AE257E24E4128A00A8C6B5 /* AddresTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddresTableViewCell.xib; sourceTree = "<group>"; };
+		F7AE258124E412B200A8C6B5 /* AnimalDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailTableViewCell.swift; sourceTree = "<group>"; };
+		F7AE258224E412B200A8C6B5 /* AnimalDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalDetailTableViewCell.xib; sourceTree = "<group>"; };
+		F7AE258B24E4132000A8C6B5 /* OtherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTableViewCell.swift; sourceTree = "<group>"; };
+		F7AE258C24E4132000A8C6B5 /* OtherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherTableViewCell.xib; sourceTree = "<group>"; };
+		F7AE258F24E4134600A8C6B5 /* RemarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkTableViewCell.swift; sourceTree = "<group>"; };
+		F7AE259024E4134600A8C6B5 /* RemarkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemarkTableViewCell.xib; sourceTree = "<group>"; };
+		F7AE259324E4136500A8C6B5 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +95,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39AC69F1F12D521FF2C2D959 /* Pods_Petmeetch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7997B4A0088059F1F6CDB47C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				540FB91ABC0AC3FB6FC1C9C6 /* Pods-Petmeetch.debug.xcconfig */,
+				27ED513E20BCD56C696DF515 /* Pods-Petmeetch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B99DC3F05EBFB3236185B533 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2832F39B7D93C72652528FC /* Pods_Petmeetch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F7AE252B24E4095700A8C6B5 = {
 			isa = PBXGroup;
 			children = (
 				F7AE253624E4095700A8C6B5 /* Petmeetch */,
 				F7AE253524E4095700A8C6B5 /* Products */,
+				7997B4A0088059F1F6CDB47C /* Pods */,
+				B99DC3F05EBFB3236185B533 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +140,93 @@
 		F7AE253624E4095700A8C6B5 /* Petmeetch */ = {
 			isa = PBXGroup;
 			children = (
+				F7AE257024E4105700A8C6B5 /* AnimalAdoption */,
+				F7AE254D24E40B8700A8C6B5 /* AR */,
 				F7AE253724E4095700A8C6B5 /* AppDelegate.swift */,
 				F7AE253924E4095700A8C6B5 /* art.scnassets */,
-				F7AE253B24E4095700A8C6B5 /* ViewController.swift */,
 				F7AE253D24E4095700A8C6B5 /* Main.storyboard */,
 				F7AE254024E4095800A8C6B5 /* Assets.xcassets */,
 				F7AE254224E4095800A8C6B5 /* LaunchScreen.storyboard */,
 				F7AE254524E4095800A8C6B5 /* Info.plist */,
+				F7AE254B24E409B500A8C6B5 /* SelectionViewController.swift */,
 			);
 			path = Petmeetch;
+			sourceTree = "<group>";
+		};
+		F7AE254D24E40B8700A8C6B5 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE256D24E40E6E00A8C6B5 /* Utilities */,
+				F7AE256824E40DF700A8C6B5 /* Additional View Controllers */,
+				F7AE256324E40D9A00A8C6B5 /* FocusSquare */,
+				F7AE255E24E40D3500A8C6B5 /* VirtualObject */,
+				F7AE254E24E40BAD00A8C6B5 /* ViewController.swift */,
+				F7AE255024E40BF200A8C6B5 /* ViewController+ARSCNViewDelegate.swift */,
+				F7AE255224E40C2600A8C6B5 /* ViewController+Actions.swift */,
+				F7AE255424E40C5400A8C6B5 /* ViewController+ObjectSelection.swift */,
+				F7AE255624E40CA200A8C6B5 /* ViewController+CoachingOverlay.swift */,
+				F7AE255824E40CD500A8C6B5 /* VirtualObjectInteraction.swift */,
+				F7AE255A24E40CF400A8C6B5 /* ThresholdPanGesture.swift */,
+				F7AE255C24E40D1800A8C6B5 /* VirtualObjectARView.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		F7AE255E24E40D3500A8C6B5 /* VirtualObject */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE255F24E40D5700A8C6B5 /* VirtualObject.swift */,
+				F7AE256124E40D7A00A8C6B5 /* VirtualObjectLoader.swift */,
+			);
+			path = VirtualObject;
+			sourceTree = "<group>";
+		};
+		F7AE256324E40D9A00A8C6B5 /* FocusSquare */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE256424E40DAE00A8C6B5 /* FocusSquare.swift */,
+				F7AE256624E40DD200A8C6B5 /* FocusSquareSegment.swift */,
+			);
+			path = FocusSquare;
+			sourceTree = "<group>";
+		};
+		F7AE256824E40DF700A8C6B5 /* Additional View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE256924E40E1800A8C6B5 /* StatusViewController.swift */,
+				F7AE256B24E40E3F00A8C6B5 /* VirtualObjectSelection.swift */,
+			);
+			path = "Additional View Controllers";
+			sourceTree = "<group>";
+		};
+		F7AE256D24E40E6E00A8C6B5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE256E24E40E7A00A8C6B5 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F7AE257024E4105700A8C6B5 /* AnimalAdoption */ = {
+			isa = PBXGroup;
+			children = (
+				F7AE257124E4111200A8C6B5 /* OpenData.swift */,
+				F7AE257324E4112D00A8C6B5 /* CardView.swift */,
+				F7AE257524E4115D00A8C6B5 /* AnimalTableViewCell.swift */,
+				F7AE257624E4115D00A8C6B5 /* AnimalTableViewCell.xib */,
+				F7AE257924E4119F00A8C6B5 /* AnimalDetailViewController.swift */,
+				F7AE257B24E4126100A8C6B5 /* Animal.swift */,
+				F7AE257D24E4128A00A8C6B5 /* AddresTableViewCell.swift */,
+				F7AE257E24E4128A00A8C6B5 /* AddresTableViewCell.xib */,
+				F7AE258124E412B200A8C6B5 /* AnimalDetailTableViewCell.swift */,
+				F7AE258224E412B200A8C6B5 /* AnimalDetailTableViewCell.xib */,
+				F7AE258B24E4132000A8C6B5 /* OtherTableViewCell.swift */,
+				F7AE258C24E4132000A8C6B5 /* OtherTableViewCell.xib */,
+				F7AE258F24E4134600A8C6B5 /* RemarkTableViewCell.swift */,
+				F7AE259024E4134600A8C6B5 /* RemarkTableViewCell.xib */,
+				F7AE259324E4136500A8C6B5 /* AnimalViewController.swift */,
+			);
+			path = AnimalAdoption;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7AE254824E4095800A8C6B5 /* Build configuration list for PBXNativeTarget "Petmeetch" */;
 			buildPhases = (
+				E3D0F5682CFDA4A27185ABD2 /* [CP] Check Pods Manifest.lock */,
 				F7AE253024E4095700A8C6B5 /* Sources */,
 				F7AE253124E4095700A8C6B5 /* Frameworks */,
 				F7AE253224E4095700A8C6B5 /* Resources */,
+				51CFD205538D03B992503E51 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,20 +291,92 @@
 			files = (
 				F7AE253A24E4095700A8C6B5 /* art.scnassets in Resources */,
 				F7AE254424E4095800A8C6B5 /* LaunchScreen.storyboard in Resources */,
+				F7AE258424E412B200A8C6B5 /* AnimalDetailTableViewCell.xib in Resources */,
+				F7AE258024E4128A00A8C6B5 /* AddresTableViewCell.xib in Resources */,
+				F7AE258E24E4132000A8C6B5 /* OtherTableViewCell.xib in Resources */,
 				F7AE254124E4095800A8C6B5 /* Assets.xcassets in Resources */,
 				F7AE253F24E4095700A8C6B5 /* Main.storyboard in Resources */,
+				F7AE259224E4134600A8C6B5 /* RemarkTableViewCell.xib in Resources */,
+				F7AE257824E4115D00A8C6B5 /* AnimalTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51CFD205538D03B992503E51 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Petmeetch/Pods-Petmeetch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Petmeetch/Pods-Petmeetch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Petmeetch/Pods-Petmeetch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3D0F5682CFDA4A27185ABD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Petmeetch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F7AE253024E4095700A8C6B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7AE253C24E4095700A8C6B5 /* ViewController.swift in Sources */,
+				F7AE255524E40C5400A8C6B5 /* ViewController+ObjectSelection.swift in Sources */,
+				F7AE259124E4134600A8C6B5 /* RemarkTableViewCell.swift in Sources */,
+				F7AE255124E40BF200A8C6B5 /* ViewController+ARSCNViewDelegate.swift in Sources */,
+				F7AE255D24E40D1800A8C6B5 /* VirtualObjectARView.swift in Sources */,
+				F7AE259424E4136500A8C6B5 /* AnimalViewController.swift in Sources */,
+				F7AE255324E40C2600A8C6B5 /* ViewController+Actions.swift in Sources */,
+				F7AE256A24E40E1800A8C6B5 /* StatusViewController.swift in Sources */,
+				F7AE257A24E4119F00A8C6B5 /* AnimalDetailViewController.swift in Sources */,
+				F7AE254F24E40BAD00A8C6B5 /* ViewController.swift in Sources */,
+				F7AE256724E40DD200A8C6B5 /* FocusSquareSegment.swift in Sources */,
+				F7AE257424E4112D00A8C6B5 /* CardView.swift in Sources */,
+				F7AE256224E40D7A00A8C6B5 /* VirtualObjectLoader.swift in Sources */,
+				F7AE258324E412B200A8C6B5 /* AnimalDetailTableViewCell.swift in Sources */,
+				F7AE256024E40D5700A8C6B5 /* VirtualObject.swift in Sources */,
+				F7AE257C24E4126100A8C6B5 /* Animal.swift in Sources */,
+				F7AE254C24E409B500A8C6B5 /* SelectionViewController.swift in Sources */,
+				F7AE256F24E40E7A00A8C6B5 /* Utilities.swift in Sources */,
+				F7AE256524E40DAE00A8C6B5 /* FocusSquare.swift in Sources */,
+				F7AE257724E4115D00A8C6B5 /* AnimalTableViewCell.swift in Sources */,
+				F7AE256C24E40E3F00A8C6B5 /* VirtualObjectSelection.swift in Sources */,
+				F7AE257F24E4128A00A8C6B5 /* AddresTableViewCell.swift in Sources */,
+				F7AE255B24E40CF400A8C6B5 /* ThresholdPanGesture.swift in Sources */,
 				F7AE253824E4095700A8C6B5 /* AppDelegate.swift in Sources */,
+				F7AE257224E4111200A8C6B5 /* OpenData.swift in Sources */,
+				F7AE258D24E4132000A8C6B5 /* OtherTableViewCell.swift in Sources */,
+				F7AE255724E40CA200A8C6B5 /* ViewController+CoachingOverlay.swift in Sources */,
+				F7AE255924E40CD500A8C6B5 /* VirtualObjectInteraction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +518,7 @@
 		};
 		F7AE254924E4095800A8C6B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 540FB91ABC0AC3FB6FC1C9C6 /* Pods-Petmeetch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +537,7 @@
 		};
 		F7AE254A24E4095800A8C6B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27ED513E20BCD56C696DF515 /* Pods-Petmeetch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
