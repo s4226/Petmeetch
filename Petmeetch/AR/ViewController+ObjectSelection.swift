@@ -74,7 +74,9 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
         
         // If the virtual object is not yet in the scene, add it.
         if virtualObject.parent == nil {
-            
+            let bowlNode = virtualObject.childNode(withName: "bowl", recursively: true)
+            bowlNode?.isHidden = true
+
             self.sceneView.scene.rootNode.addChildNode(virtualObject)
             
             // MARK: -let model follow camera rotation

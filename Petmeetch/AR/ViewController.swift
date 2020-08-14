@@ -11,6 +11,7 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController{
+    
 
     @IBOutlet var sceneView: VirtualObjectARView!
     
@@ -19,6 +20,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var foodbutton: UIButton!
     
     @IBOutlet weak var playbutton: UIButton!
+    
+    @IBOutlet weak var sitbutton: UIButton!
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     
@@ -31,6 +34,7 @@ class ViewController: UIViewController{
     var focusSquare = FocusSquare()
     //animation
     var animations = [String: CAAnimation]()
+    
     //initial model
     var idle:Bool = true
     
@@ -62,9 +66,10 @@ class ViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //MARK: -功能鍵隱藏
+        //MARK: -互動鍵隱藏
                 foodbutton.isHidden = true
                 playbutton.isHidden = true
+                sitbutton.isHidden = true
         sceneView.delegate = self
         sceneView.session.delegate = self
         // Set up coaching overlay.
@@ -74,7 +79,6 @@ class ViewController: UIViewController{
         
 //        // Set up scene content.
         sceneView.scene.rootNode.addChildNode(focusSquare)
-        
         
         // Hook up status view controller callback(s).
         statusViewController.restartExperienceHandler = { [unowned self] in
@@ -181,33 +185,10 @@ class ViewController: UIViewController{
                    animations[withKey] = animationObject
                }
            }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let location = touches.first!.location(in: sceneView)
-        
-        // Let's test if a 3D Object was touch
-        var hitTestOptions = [SCNHitTestOption: Any]()
-        hitTestOptions[SCNHitTestOption.boundingBoxOnly] = true
-        
-        let hitResults: [SCNHitTestResult]  = sceneView.hitTest(location, options: hitTestOptions)
-        
-        if hitResults.first != nil {
-            if(idle) {
-                playAnimation(key: "Breathing")
-                playAnimation(key: "sitdown")
-                
-            } else {
-                stopAnimation(key: "sitdown")
-                
-            }
-            idle = !idle
-            return
-        }
-    }
-    
     func playAnimation(key: String) {
         // Add the animation to start playing it right away
         sceneView.scene.rootNode.addAnimation(animations[key]!, forKey: key)
+        
     }
     
     func stopAnimation(key: String) {
@@ -215,22 +196,21 @@ class ViewController: UIViewController{
         sceneView.scene.rootNode.removeAnimation(forKey: key, blendOutDuration: CGFloat(0.5))
     }
     @IBAction func foodbuttonTapped(_ sender: UIButton) {
-        if(idle) {
+        let bowl = sceneView.scene.rootNode.childNode(withName: "bowl", recursively: true)
+        if idle{
+            bowl?.isHidden = false
             playAnimation(key: "eat")
-        } else {
-            stopAnimation(key: "eat")
+
         }
-        idle = !idle
-//        self.statusViewController.showMessage(NSLocalizedString("Your pet is having a good time!!!", comment: "Your pet is having a good time!!!"))
+        RunLoop.current.run(until:Date()+4)
+        bowl?.isHidden = true
     }
     @IBAction func playbuttonTapped(_ sender: UIButton){
-        if(idle){
-            playAnimation(key: "play")
-        }else{
-            stopAnimation(key: "play")
-        }
-        idle = !idle
-        
+        playAnimation(key: "play")
+    }
+    
+    @IBAction func sitbuttonTapped(_ sender: UIButton) {
+        playAnimation(key: "sitdown")
     }
 }
 class ARSceneUtils {

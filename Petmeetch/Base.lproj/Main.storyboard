@@ -536,7 +536,7 @@
         <!--View Controller-->
         <scene sceneID="IJh-MK-hL6">
             <objects>
-                <viewController id="a98-q7-Xds" customClass="ViewController" customModule="petmeetch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a98-q7-Xds" customClass="ViewController" customModule="Petmeetch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o76-JA-tDH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -549,7 +549,7 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLR-oB-KcU" customClass="VirtualObjectARView" customModule="petmeetch" customModuleProvider="target">
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLR-oB-KcU" customClass="VirtualObjectARView" customModule="Petmeetch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </sceneKitView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBp-7p-HG5">
@@ -575,15 +575,6 @@
                             <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="h0M-cN-AD9">
                                 <rect key="frame" x="166" y="606.5" width="43" height="43"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-AO-91a">
-                                <rect key="frame" x="16" y="599" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Feed"/>
-                                <connections>
-                                    <action selector="foodbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="wSL-b7-IZ2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtg-9K-6as">
                                 <rect key="frame" x="332" y="93" width="43" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -594,14 +585,35 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE6-nR-eHY">
-                                <rect key="frame" x="311" y="599" width="48" height="48"/>
+                                <rect key="frame" x="285" y="604" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Play">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="playbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="4j5-uB-bHg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hv-p3-TLd">
+                                <rect key="frame" x="163" y="604" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Sit"/>
+                                <connections>
+                                    <action selector="sitbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="nkg-gf-rAh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-AO-91a">
+                                <rect key="frame" x="41" y="604" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Feed"/>
+                                <connections>
+                                    <action selector="foodbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="wSL-b7-IZ2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -635,6 +647,7 @@
                         <outlet property="foodbutton" destination="kHQ-AO-91a" id="KZm-Zb-XwH"/>
                         <outlet property="playbutton" destination="YE6-nR-eHY" id="jVw-49-E7D"/>
                         <outlet property="sceneView" destination="sLR-oB-KcU" id="Yob-8W-hGB"/>
+                        <outlet property="sitbutton" destination="0Hv-p3-TLd" id="kWo-j6-p75"/>
                         <outlet property="spinner" destination="h0M-cN-AD9" id="I5R-Ta-Nrc"/>
                         <outlet property="upperControlsView" destination="xBp-7p-HG5" id="kEr-mj-aRw"/>
                         <segue destination="dZD-mY-dAt" kind="popoverPresentation" identifier="showObjects" popoverAnchorView="Pa6-9k-bLn" id="Wpd-jq-MbN">
@@ -650,13 +663,13 @@
         <!--Virtual Object Selection View Controller-->
         <scene sceneID="YVr-uZ-xZC">
             <objects>
-                <tableViewController id="dZD-mY-dAt" customClass="VirtualObjectSelectionViewController" customModule="petmeetch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="dZD-mY-dAt" customClass="VirtualObjectSelectionViewController" customModule="Petmeetch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="Urm-kv-NKc">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ObjectCell" rowHeight="50" id="QMK-Kt-ZrB" customClass="ObjectCell" customModule="petmeetch" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ObjectCell" rowHeight="50" id="QMK-Kt-ZrB" customClass="ObjectCell" customModule="Petmeetch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="250" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="QMK-Kt-ZrB" id="AZ7-bc-TCN">
@@ -715,7 +728,7 @@
         <!--Status View Controller-->
         <scene sceneID="HTe-Et-joA">
             <objects>
-                <viewController id="2EA-Bt-0S0" customClass="StatusViewController" customModule="petmeetch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2EA-Bt-0S0" customClass="StatusViewController" customModule="Petmeetch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sCe-3m-yfg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

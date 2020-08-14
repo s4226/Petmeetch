@@ -27,12 +27,15 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 //MARK: -功能鍵hidden close
                 self.foodbutton.isHidden = false
                 self.playbutton.isHidden = false
+                self.sitbutton.isHidden = false
         
             }
             else{
                 self.focusSquare.isHidden = false
                 self.addObjectButton.isHidden = false
                 self.foodbutton.isHidden = true
+                self.playbutton.isHidden = true
+                self.sitbutton.isHidden = true
 
             }
 
@@ -53,6 +56,7 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
             if self.virtualObjectLoader.loadedObjects.isEmpty {
                 self.statusViewController.scheduleMessage(NSLocalizedString("TAP + TO PLACE YOUR PET", comment: "TAP + TO PLACE YOUR PET"), inSeconds: 7.5, messageType: .contentPlacement)
             }
+            
         }
     }
     
