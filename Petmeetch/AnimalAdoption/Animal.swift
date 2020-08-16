@@ -37,14 +37,14 @@ struct Animal: Codable{
     var shelter_address: String
     var shelter_tel: String
 }
-extension Animal: Hashable {
-    static func == (lhs: Animal, rhs: Animal) -> Bool {
-        return lhs.animal_id == rhs.animal_id && lhs.animal_subid == rhs.animal_subid
-    }
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(animal_id)
-        hasher.combine(animal_subid)
-    }
-}
+//extension Animal: Hashable {
+//    static func == (lhs: Animal, rhs: Animal) -> Bool {
+//        return lhs.animal_id == rhs.animal_id && lhs.animal_subid == rhs.animal_subid
+//    }
+//
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(animal_id)
+//        hasher.combine(animal_subid)
+//    }
+//}
 

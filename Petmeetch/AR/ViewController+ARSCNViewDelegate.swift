@@ -28,6 +28,7 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 self.foodbutton.isHidden = false
                 self.playbutton.isHidden = false
                 self.sitbutton.isHidden = false
+                self.getdownbutton.isHidden = false
         
             }
             else{
@@ -36,6 +37,7 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 self.foodbutton.isHidden = true
                 self.playbutton.isHidden = true
                 self.sitbutton.isHidden = true
+                self.getdownbutton.isHidden = true
 
             }
 

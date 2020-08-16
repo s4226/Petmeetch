@@ -253,7 +253,7 @@
                         <outlet property="filterButton" destination="3dK-IN-WtN" id="oEN-na-NWq"/>
                         <outlet property="sexButton" destination="HYw-RP-LEJ" id="uu8-2F-YW8"/>
                         <outlet property="tableView" destination="ZkD-vs-aI7" id="ALN-0p-tvd"/>
-                        <outlet property="typeButton" destination="feJ-Yq-1Tm" id="N2g-4i-LJw"/>
+                        <outlet property="typeButton" destination="feJ-Yq-1Tm" id="dF5-CX-nvS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8z-O4-s3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -596,15 +596,16 @@
                                     <action selector="playbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="4j5-uB-bHg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hv-p3-TLd">
-                                <rect key="frame" x="163" y="604" width="48" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFe-Pg-nUm">
+                                <rect key="frame" x="203" y="604" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Sit"/>
+                                <state key="normal" title="Get"/>
                                 <connections>
-                                    <action selector="sitbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="nkg-gf-rAh"/>
+                                    <action selector="getdownbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="hfY-c0-qqT"/>
+                                    <action selector="sitbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="77G-eu-nzr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-AO-91a">
@@ -614,6 +615,17 @@
                                 <state key="normal" title="Feed"/>
                                 <connections>
                                     <action selector="foodbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="wSL-b7-IZ2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hv-p3-TLd">
+                                <rect key="frame" x="120" y="604" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Sit"/>
+                                <connections>
+                                    <action selector="sitbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="nkg-gf-rAh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -645,6 +657,7 @@
                         <outlet property="addObjectButton" destination="Pa6-9k-bLn" id="k3C-Um-nap"/>
                         <outlet property="blurView" destination="sSO-qG-bS3" id="1vr-SC-mx5"/>
                         <outlet property="foodbutton" destination="kHQ-AO-91a" id="KZm-Zb-XwH"/>
+                        <outlet property="getdownbutton" destination="UFe-Pg-nUm" id="B0P-ek-My8"/>
                         <outlet property="playbutton" destination="YE6-nR-eHY" id="jVw-49-E7D"/>
                         <outlet property="sceneView" destination="sLR-oB-KcU" id="Yob-8W-hGB"/>
                         <outlet property="sitbutton" destination="0Hv-p3-TLd" id="kWo-j6-p75"/>

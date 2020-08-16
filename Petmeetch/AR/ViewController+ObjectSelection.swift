@@ -88,15 +88,17 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
                         // MARK: - intitial animation
             if(virtualObject.modelName == "Labrador")
             {
-                // Load all the DAE animations
+                // Load  the breathing animation
                 self.loadAnimation(withKey: "Breathing", sceneName: "art.scnassets/Labrador/LabradorBreathing", animationIdentifier: "LabradorBreathing-1")
 
-                // Load all the DAE animations
+                // Load  the sitdown animation
                 self.loadAnimation(withKey: "sitdown", sceneName: "art.scnassets/Labrador/labradorsitdown", animationIdentifier: "labradorsitdown-1")
-                // Load all the DAE animations
+                // Load  the eat animation
                 self.loadAnimation(withKey: "eat", sceneName: "art.scnassets/Labrador/Labradoreat", animationIdentifier: "Labradoreat-1")
-                
+                //Load  the play animation
                 self.loadAnimation(withKey: "play", sceneName: "art.scnassets/Labrador/LabradorPlaying", animationIdentifier: "LabradorPlaying-1")
+                //Load the getdown animation
+                self.loadAnimation(withKey: "getdown", sceneName: "art.scnassets/Labrador/LabradorGetDown", animationIdentifier: "LabradorGetDown-1")
                 
             }
 

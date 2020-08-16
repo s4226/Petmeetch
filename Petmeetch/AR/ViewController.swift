@@ -23,6 +23,9 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var sitbutton: UIButton!
     
+    @IBOutlet weak var getdownbutton: UIButton!
+    
+    
     @IBOutlet weak var blurView: UIVisualEffectView!
     
     @IBOutlet weak var spinner :UIActivityIndicatorView!
@@ -70,6 +73,7 @@ class ViewController: UIViewController{
                 foodbutton.isHidden = true
                 playbutton.isHidden = true
                 sitbutton.isHidden = true
+                getdownbutton.isHidden = true
         sceneView.delegate = self
         sceneView.session.delegate = self
         // Set up coaching overlay.
@@ -211,6 +215,10 @@ class ViewController: UIViewController{
     
     @IBAction func sitbuttonTapped(_ sender: UIButton) {
         playAnimation(key: "sitdown")
+    }
+    
+    @IBAction func getdownbuttonTapped(_ sender: UIButton) {
+        playAnimation(key: "getdown")
     }
 }
 class ARSceneUtils {
