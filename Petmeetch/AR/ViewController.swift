@@ -17,9 +17,9 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var addObjectButton: UIButton!
     
-    @IBOutlet weak var foodbutton: UIButton!
+    @IBOutlet weak var feedbutton: UIButton!
     
-    @IBOutlet weak var playbutton: UIButton!
+    @IBOutlet weak var spinbutton: UIButton!
     
     @IBOutlet weak var sitbutton: UIButton!
     
@@ -70,8 +70,8 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //MARK: -互動鍵隱藏
-                foodbutton.isHidden = true
-                playbutton.isHidden = true
+                feedbutton.isHidden = true
+                spinbutton.isHidden = true
                 sitbutton.isHidden = true
                 getdownbutton.isHidden = true
         sceneView.delegate = self
@@ -199,7 +199,7 @@ class ViewController: UIViewController{
         // Stop the animation with a smooth transition
         sceneView.scene.rootNode.removeAnimation(forKey: key, blendOutDuration: CGFloat(0.5))
     }
-    @IBAction func foodbuttonTapped(_ sender: UIButton) {
+    @IBAction func feedbuttonTapped(_ sender: UIButton) {
         let bowl = sceneView.scene.rootNode.childNode(withName: "bowl", recursively: true)
         if idle{
             bowl?.isHidden = false
@@ -208,9 +208,12 @@ class ViewController: UIViewController{
         }
         RunLoop.current.run(until:Date()+4)
         bowl?.isHidden = true
+        
     }
-    @IBAction func playbuttonTapped(_ sender: UIButton){
-        playAnimation(key: "play")
+    @IBAction func spinbuttonTapped(_ sender: UIButton){
+        animations["spin"]?.speed = 1.5
+        playAnimation(key: "spin")
+        
     }
     
     @IBAction func sitbuttonTapped(_ sender: UIButton) {

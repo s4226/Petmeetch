@@ -25,8 +25,8 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 self.focusSquare.isHidden = true
                 self.addObjectButton.isHidden = true
                 //MARK: -功能鍵hidden close
-                self.foodbutton.isHidden = false
-                self.playbutton.isHidden = false
+                self.feedbutton.isHidden = false
+                self.spinbutton.isHidden = false
                 self.sitbutton.isHidden = false
                 self.getdownbutton.isHidden = false
         
@@ -34,8 +34,8 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
             else{
                 self.focusSquare.isHidden = false
                 self.addObjectButton.isHidden = false
-                self.foodbutton.isHidden = true
-                self.playbutton.isHidden = true
+                self.feedbutton.isHidden = true
+                self.spinbutton.isHidden = true
                 self.sitbutton.isHidden = true
                 self.getdownbutton.isHidden = true
 

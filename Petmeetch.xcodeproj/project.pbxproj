@@ -32,7 +32,6 @@
 		F7AE257224E4111200A8C6B5 /* OpenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257124E4111200A8C6B5 /* OpenData.swift */; };
 		F7AE257424E4112D00A8C6B5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257324E4112D00A8C6B5 /* CardView.swift */; };
 		F7AE257724E4115D00A8C6B5 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257524E4115D00A8C6B5 /* AnimalTableViewCell.swift */; };
-		F7AE257824E4115D00A8C6B5 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7AE257624E4115D00A8C6B5 /* AnimalTableViewCell.xib */; };
 		F7AE257A24E4119F00A8C6B5 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257924E4119F00A8C6B5 /* AnimalDetailViewController.swift */; };
 		F7AE257C24E4126100A8C6B5 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257B24E4126100A8C6B5 /* Animal.swift */; };
 		F7AE257F24E4128A00A8C6B5 /* AddresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE257D24E4128A00A8C6B5 /* AddresTableViewCell.swift */; };
@@ -76,7 +75,6 @@
 		F7AE257124E4111200A8C6B5 /* OpenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenData.swift; sourceTree = "<group>"; };
 		F7AE257324E4112D00A8C6B5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F7AE257524E4115D00A8C6B5 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
-		F7AE257624E4115D00A8C6B5 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
 		F7AE257924E4119F00A8C6B5 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		F7AE257B24E4126100A8C6B5 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		F7AE257D24E4128A00A8C6B5 /* AddresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddresTableViewCell.swift; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 				F7AE257124E4111200A8C6B5 /* OpenData.swift */,
 				F7AE257324E4112D00A8C6B5 /* CardView.swift */,
 				F7AE257524E4115D00A8C6B5 /* AnimalTableViewCell.swift */,
-				F7AE257624E4115D00A8C6B5 /* AnimalTableViewCell.xib */,
 				F7AE257924E4119F00A8C6B5 /* AnimalDetailViewController.swift */,
 				F7AE257B24E4126100A8C6B5 /* Animal.swift */,
 				F7AE257D24E4128A00A8C6B5 /* AddresTableViewCell.swift */,
@@ -297,7 +294,6 @@
 				F7AE254124E4095800A8C6B5 /* Assets.xcassets in Resources */,
 				F7AE253F24E4095700A8C6B5 /* Main.storyboard in Resources */,
 				F7AE259224E4134600A8C6B5 /* RemarkTableViewCell.xib in Resources */,
-				F7AE257824E4115D00A8C6B5 /* AnimalTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

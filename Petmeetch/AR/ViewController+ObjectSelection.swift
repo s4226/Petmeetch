@@ -80,9 +80,9 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
             self.sceneView.scene.rootNode.addChildNode(virtualObject)
             
             // MARK: -let model follow camera rotation
-            let billoardConstraint = SCNBillboardConstraint()
-            billoardConstraint.freeAxes = SCNBillboardAxis.Y
-            virtualObject.constraints = [billoardConstraint]
+//            let billoardConstraint = SCNBillboardConstraint()
+//            billoardConstraint.freeAxes = SCNBillboardAxis.Y
+//            virtualObject.constraints = [billoardConstraint]
 
 
                         // MARK: - intitial animation
@@ -96,7 +96,7 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
                 // Load  the eat animation
                 self.loadAnimation(withKey: "eat", sceneName: "art.scnassets/Labrador/Labradoreat", animationIdentifier: "Labradoreat-1")
                 //Load  the play animation
-                self.loadAnimation(withKey: "play", sceneName: "art.scnassets/Labrador/LabradorPlaying", animationIdentifier: "LabradorPlaying-1")
+                self.loadAnimation(withKey: "spin", sceneName: "art.scnassets/Labrador/LabradorPlaying", animationIdentifier: "LabradorPlaying-1")
                 //Load the getdown animation
                 self.loadAnimation(withKey: "getdown", sceneName: "art.scnassets/Labrador/LabradorGetDown", animationIdentifier: "LabradorGetDown-1")
                 

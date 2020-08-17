@@ -513,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Wf-bB-zwX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2088.8000000000002" y="877.51124437781118"/>
+            <point key="canvasLocation" x="2089" y="878"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t9K-2Z-FM9">
@@ -551,6 +551,7 @@
                             </visualEffectView>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLR-oB-KcU" customClass="VirtualObjectARView" customModule="Petmeetch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             </sceneKitView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBp-7p-HG5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
@@ -589,11 +590,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Play">
+                                <state key="normal" title="旋轉">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="playbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="4j5-uB-bHg"/>
+                                    <action selector="spinbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="gmS-b8-EgL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFe-Pg-nUm">
@@ -602,19 +603,18 @@
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Get"/>
+                                <state key="normal" title="趴下"/>
                                 <connections>
                                     <action selector="getdownbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="hfY-c0-qqT"/>
-                                    <action selector="sitbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="77G-eu-nzr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-AO-91a">
                                 <rect key="frame" x="41" y="604" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Feed"/>
+                                <state key="normal" title="餵食"/>
                                 <connections>
-                                    <action selector="foodbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="wSL-b7-IZ2"/>
+                                    <action selector="feedbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="uYW-68-yFD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hv-p3-TLd">
@@ -623,7 +623,7 @@
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Sit"/>
+                                <state key="normal" title="坐下"/>
                                 <connections>
                                     <action selector="sitbuttonTapped:" destination="a98-q7-Xds" eventType="touchUpInside" id="nkg-gf-rAh"/>
                                 </connections>
@@ -656,11 +656,11 @@
                     <connections>
                         <outlet property="addObjectButton" destination="Pa6-9k-bLn" id="k3C-Um-nap"/>
                         <outlet property="blurView" destination="sSO-qG-bS3" id="1vr-SC-mx5"/>
-                        <outlet property="foodbutton" destination="kHQ-AO-91a" id="KZm-Zb-XwH"/>
+                        <outlet property="feedbutton" destination="kHQ-AO-91a" id="KZm-Zb-XwH"/>
                         <outlet property="getdownbutton" destination="UFe-Pg-nUm" id="B0P-ek-My8"/>
-                        <outlet property="playbutton" destination="YE6-nR-eHY" id="jVw-49-E7D"/>
                         <outlet property="sceneView" destination="sLR-oB-KcU" id="Yob-8W-hGB"/>
                         <outlet property="sitbutton" destination="0Hv-p3-TLd" id="kWo-j6-p75"/>
+                        <outlet property="spinbutton" destination="YE6-nR-eHY" id="06p-Xm-kPe"/>
                         <outlet property="spinner" destination="h0M-cN-AD9" id="I5R-Ta-Nrc"/>
                         <outlet property="upperControlsView" destination="xBp-7p-HG5" id="kEr-mj-aRw"/>
                         <segue destination="dZD-mY-dAt" kind="popoverPresentation" identifier="showObjects" popoverAnchorView="Pa6-9k-bLn" id="Wpd-jq-MbN">
@@ -736,7 +736,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JmX-kC-SqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2939" y="115"/>
+            <point key="canvasLocation" x="2824" y="134"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="HTe-Et-joA">
@@ -825,7 +825,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVK-ax-Ga1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2089" y="-607"/>
+            <point key="canvasLocation" x="2089" y="-315"/>
         </scene>
     </scenes>
     <resources>

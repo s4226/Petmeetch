@@ -65,7 +65,7 @@ class AnimalViewController: UIViewController{
         activityIndicator.center = self.tableView.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
-        self.navigationController?.view.addSubview(activityIndicator)
+        self.view.addSubview(activityIndicator)
         
         if let urlStr = OpenDataUrl.animal.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlStr) {
             print(url)
