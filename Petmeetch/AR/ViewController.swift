@@ -102,6 +102,7 @@ class ViewController: UIViewController{
         
         // Start the `ARSession`.
         resetTracking()
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -203,6 +204,7 @@ class ViewController: UIViewController{
         let bowl = sceneView.scene.rootNode.childNode(withName: "bowl", recursively: true)
         if idle{
             bowl?.isHidden = false
+            print("eat")
             playAnimation(key: "eat")
 
         }
@@ -212,17 +214,21 @@ class ViewController: UIViewController{
     }
     @IBAction func spinbuttonTapped(_ sender: UIButton){
         animations["spin"]?.speed = 1.5
+        print("spin")
         playAnimation(key: "spin")
         
     }
     
     @IBAction func sitbuttonTapped(_ sender: UIButton) {
+        print("sitdown")
         playAnimation(key: "sitdown")
     }
     
     @IBAction func getdownbuttonTapped(_ sender: UIButton) {
+        print("getdown")
         playAnimation(key: "getdown")
     }
+    
 }
 class ARSceneUtils {
         /// return the distance between anchor and camera.

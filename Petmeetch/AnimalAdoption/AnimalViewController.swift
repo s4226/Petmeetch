@@ -142,6 +142,11 @@ extension AnimalViewController{
     //自動帶入上一次設定的篩選條件
     func filter()
     {
+        userDefaults.register(defaults: ["type": "不限"])
+        userDefaults.register(defaults: ["sex": "不限"])
+        userDefaults.register(defaults: ["bodytype": "不限"])
+        userDefaults.register(defaults: ["age": "不限"])
+        userDefaults.register(defaults: ["city": "全部縣市"])
         if (userDefaults.string(forKey: "type") == nil)
         {
             userDefaults.set("不限", forKey: "type")
@@ -149,7 +154,7 @@ extension AnimalViewController{
         if (userDefaults.string(forKey: "sex") == nil)
         {
             userDefaults.set("不限", forKey: "sex")
-            
+
         }
         if (userDefaults.string(forKey: "bodytype") == nil)
         {
@@ -301,42 +306,46 @@ extension AnimalViewController{
         typeDropDown.anchorView = typeButton
         
         typeDropDown.bottomOffset = CGPoint(x: 0, y: typeButton.bounds.height)
-        
+        typeButton.setTitle(userDefaults.string(forKey: "type") ?? "不限", for: .normal)
         typeDropDown.dataSource = ["不限","狗","貓"]
-        typeButton.setTitle(userDefaults.string(forKey: "type"), for: .normal)
         typeDropDown.selectionAction = { [weak self] (index, item) in
             self?.typeButton.setTitle(item, for: .normal)
         }
+        
     }
     func setupsexDropDown(){
         sexDropDown.anchorView = sexButton
         
         sexDropDown.bottomOffset = CGPoint(x: 0, y: sexButton.bounds.height)
-        sexButton.setTitle(userDefaults.string(forKey: "sex"), for: .normal)
+        sexButton.setTitle(userDefaults.string(forKey: "sex") ?? "不限", for: .normal)
         sexDropDown.dataSource = ["不限","公","母"]
         sexDropDown.selectionAction = { [weak self] (index, item) in
             self?.sexButton.setTitle(item, for: .normal)
         }
+        
+
     }
     func setupbodytypeDropDown(){
         bodytypeDropDown.anchorView = bodytypeButton
         
         bodytypeDropDown.bottomOffset = CGPoint(x: 0, y: bodytypeButton.bounds.height)
-        bodytypeButton.setTitle(userDefaults.string(forKey: "bodytype"), for: .normal)
+        bodytypeButton.setTitle(userDefaults.string(forKey: "bodytype") ?? "不限", for: .normal)
         bodytypeDropDown.dataSource = ["不限","小型","中型","大型"]
                 bodytypeDropDown.selectionAction = { [weak self] (index, item) in
             self?.bodytypeButton.setTitle(item, for: .normal)
         }
+        
     }
     func setupsizeDropDown(){
         ageDropDown.anchorView = ageButton
         
         ageDropDown.bottomOffset = CGPoint(x: 0, y: ageButton.bounds.height)
-        ageButton.setTitle(userDefaults.string(forKey: "age"), for: .normal)
+        ageButton.setTitle(userDefaults.string(forKey: "age") ?? "不限", for: .normal)
         ageDropDown.dataSource = ["不限","幼年","成年"]
         ageDropDown.selectionAction = { [weak self] (index, item) in
             self?.ageButton.setTitle(item, for: .normal)
         }
+        
     }
     func setupcityDropDown(){
         cityDropDown.anchorView = cityButton
@@ -344,7 +353,7 @@ extension AnimalViewController{
         cityDropDown.bottomOffset = CGPoint(x: 0, y: cityButton.bounds.height)
         
         cityDropDown.dataSource = ["全部縣市","臺北市","新北市","基隆市","宜蘭縣","桃園縣","新竹縣","新竹市","苗栗縣","臺中市", "彰化縣","南投縣","雲林縣","嘉義縣","嘉義市","臺南市","高雄市","屏東縣","花蓮縣","臺東縣", "澎湖縣","金門縣","連江縣"]
-        cityButton.setTitle(userDefaults.string(forKey: "city"), for: .normal)
+        cityButton.setTitle(userDefaults.string(forKey: "city") ?? "全部縣市", for: .normal)
 
         cityDropDown.selectionAction = { [weak self] (index, item) in
             self?.cityButton.setTitle(item, for: .normal)
@@ -439,7 +448,14 @@ extension AnimalViewController: UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
 //        filterButton.setTitle("浪浪數量：\(animalResults.count)",for: .normal)
-        navigationItem.title = "浪浪數量:\(animalResults.count)"
+        if animalResults.count == 0 && activityIndicator.isAnimating
+        {
+            navigationItem.title = "尋找中..."
+        }else
+        {
+            navigationItem.title = "浪浪數量:\(animalResults.count)"
+
+        }
         return animalResults.count
         
 

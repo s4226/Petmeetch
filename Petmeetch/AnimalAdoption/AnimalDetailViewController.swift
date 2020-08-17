@@ -22,7 +22,7 @@ class AnimalDetailViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .singleLine
-        
+        tableView.separatorInset = .zero
         let imageUrl = URL(string: animalData.album_file)
         let processor = DownsamplingImageProcessor(size: AnimalImage.bounds.size)
             |> RoundCornerImageProcessor(cornerRadius: 0)
@@ -129,6 +129,8 @@ extension AnimalDetailViewController: UITableViewDataSource,UITableViewDelegate{
         
         switch indexPath.row {
         case 0:
+            break
+        case 1:
             let geocoder = CLGeocoder()
             geocoder.geocodeAddressString(animalData.shelter_address) { (placemarks, error) in
                 if let error = error {
@@ -147,11 +149,11 @@ extension AnimalDetailViewController: UITableViewDataSource,UITableViewDelegate{
                     
                 }
             
-        case 1:
-            break
         case 2:
             break
         case 3:
+            break
+        case 4:
             break
         default:
             break

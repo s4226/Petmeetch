@@ -10,7 +10,12 @@ import UIKit
 
 class TelTableViewCell: UITableViewCell {
     var phoneNumber = ""
-    @IBOutlet var tel: UIButton!
+    @IBOutlet var tel: UIButton!{
+        didSet{
+            tel.layer.cornerRadius = 7
+            tel.clipsToBounds = true
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

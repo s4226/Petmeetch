@@ -121,6 +121,9 @@ class StatusViewController: UIViewController {
     @IBAction private func restartExperience(_ sender: UIButton) {
         restartExperienceHandler()
     }
+    @IBAction func backrestartExperience(_ sender: UIButton){
+        restartExperienceHandler()
+    }
     
     // MARK: - Panel Visibility
     
