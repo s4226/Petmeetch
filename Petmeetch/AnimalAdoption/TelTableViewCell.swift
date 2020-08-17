@@ -1,17 +1,16 @@
 //
-//  AddresTableViewCell.swift
+//  TelTableViewCell.swift
 //  Petmeetch
 //
-//  Created by Peiru Chiu on 2020/8/12.
+//  Created by Peiru Chiu on 2020/8/17.
 //  Copyright © 2020 Peiru Chiu. All rights reserved.
 //
 
 import UIKit
-import MapKit
-class AddresTableViewCell: UITableViewCell {
 
-    @IBOutlet var locationicon: UIImageView!
-    @IBOutlet var Address: UILabel!
+class TelTableViewCell: UITableViewCell {
+    var phoneNumber = ""
+    @IBOutlet var tel: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,4 +21,5 @@ class AddresTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 }

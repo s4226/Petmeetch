@@ -10,7 +10,8 @@ import UIKit
 
 class OtherTableViewCell: UITableViewCell {
     
-
+    @IBOutlet var noteicon: UIImageView!
+    
     @IBOutlet var createtime: UILabel!
     
     @IBOutlet var cDate: UILabel!

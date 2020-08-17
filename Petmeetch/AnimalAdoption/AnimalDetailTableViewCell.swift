@@ -11,33 +11,36 @@ import UIKit
 
 class AnimalDetailTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var tagicon: UIImageView!
+
+
     @IBOutlet var kind: UILabel!{
         didSet{
             kind.layer.cornerRadius = 5
             kind.clipsToBounds = true
-            kind.backgroundColor = .systemYellow
+            kind.backgroundColor = #colorLiteral(red: 0.8392156863, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
             kind.textColor = .white
             kind.textAlignment = .center
         }
-    }
 
+    }
+    
     @IBOutlet var sex: UILabel!{
         didSet{
             sex.layer.cornerRadius = 5
             sex.clipsToBounds = true
-            sex.backgroundColor = .systemYellow
+            sex.backgroundColor = #colorLiteral(red: 0.8392156863, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
             sex.textColor = .white
             sex.textAlignment = .center
         }
 
-        
     }
-        
+    
     @IBOutlet var bodytype: UILabel!{
         didSet{
             bodytype.layer.cornerRadius = 5
             bodytype.clipsToBounds = true
-            bodytype.backgroundColor = .systemYellow
+            bodytype.backgroundColor = #colorLiteral(red: 0.8392156863, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
             bodytype.textColor = .white
             bodytype.textAlignment = .center
         }
@@ -48,7 +51,7 @@ class AnimalDetailTableViewCell: UITableViewCell {
         didSet{
             color.layer.cornerRadius = 5
             color.clipsToBounds = true
-            color.backgroundColor = .systemYellow
+            color.backgroundColor = #colorLiteral(red: 0.8392156863, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
             color.textColor = .white
             color.textAlignment = .center
         }
@@ -58,7 +61,7 @@ class AnimalDetailTableViewCell: UITableViewCell {
         didSet{
             age.layer.cornerRadius = 5
             age.clipsToBounds = true
-            age.backgroundColor = .systemYellow
+            age.backgroundColor = #colorLiteral(red: 0.8392156863, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
             age.textColor = .white
             age.textAlignment = .center
         }
@@ -71,13 +74,14 @@ class AnimalDetailTableViewCell: UITableViewCell {
         didSet{
             sterilization.layer.cornerRadius = 5
             sterilization.clipsToBounds = true
-            sterilization.backgroundColor = .systemYellow
+            sterilization.backgroundColor = #colorLiteral(red: 0.8392156863, green: 0.3333333333, blue: 0.3333333333, alpha: 1)
             sterilization.textColor = .white
             sterilization.textAlignment = .center
         }
 
     }
-    
+    @IBOutlet weak var mark: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

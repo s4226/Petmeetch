@@ -21,7 +21,7 @@ class AnimalDetailViewController: UIViewController{
         // Configure the table view
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         
         let imageUrl = URL(string: animalData.album_file)
         let processor = DownsamplingImageProcessor(size: AnimalImage.bounds.size)
@@ -76,17 +76,23 @@ extension AnimalDetailViewController: UITableViewDataSource,UITableViewDelegate{
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TelTableViewCell.self), for: indexPath) as! TelTableViewCell
+            cell.phoneNumber = animalData.shelter_tel
+            cell.selectionStyle = .none
+            return cell
+            
+        case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: AddresTableViewCell.self), for: indexPath) as! AddresTableViewCell
             cell.Address.text = "所在地\n" + animalData.shelter_name
             cell.selectionStyle = .none
             return cell
-       case 1:
+       case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:AnimalDetailTableViewCell.self), for: indexPath) as! AnimalDetailTableViewCell
             cell.kind.text = animalData.animal_kind
             cell.sex.text = sex[String(animalData.animal_sex)]!
@@ -96,7 +102,7 @@ extension AnimalDetailViewController: UITableViewDataSource,UITableViewDelegate{
             cell.sterilization.text = sterilization[String(animalData.animal_sterilization)]
             cell.selectionStyle = .none
             return cell
-       case 2:
+       case 3:
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:RemarkTableViewCell.self), for: indexPath) as!RemarkTableViewCell
         if  animalData.animal_remark == ""{
             cell.remark.text = "備註\n無"
@@ -105,7 +111,7 @@ extension AnimalDetailViewController: UITableViewDataSource,UITableViewDelegate{
         }
         cell.selectionStyle = .none
         return cell
-       case 3:
+       case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:OtherTableViewCell.self), for: indexPath) as! OtherTableViewCell
             cell.createtime.text = "資料建立時間: " + animalData.animal_createtime
             cell.cDate.text = "資料更新時間: "+animalData.cDate
@@ -118,6 +124,7 @@ extension AnimalDetailViewController: UITableViewDataSource,UITableViewDelegate{
             fatalError("Failed to instantiate the table view cell for detail view controller")
         }
     }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
