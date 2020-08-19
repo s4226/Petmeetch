@@ -12,7 +12,6 @@ import ARKit
 
 class ViewController: UIViewController{
     
-
     @IBOutlet var sceneView: VirtualObjectARView!
     
     @IBOutlet weak var addObjectButton: UIButton!
@@ -25,6 +24,15 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var getdownbutton: UIButton!
     
+    var timer: Timer?
+    
+    @IBOutlet weak var petmood: UIImageView!
+    
+    @IBOutlet weak var countlabel: UILabel!
+    
+    var count = 0
+
+    let userDefaults = UserDefaults.standard
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     
@@ -69,11 +77,13 @@ class ViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        record()
+        moodChange()
         //MARK: -互動鍵隱藏
-                feedbutton.isHidden = true
-                spinbutton.isHidden = true
-                sitbutton.isHidden = true
-                getdownbutton.isHidden = true
+        feedbutton.isHidden = true
+        spinbutton.isHidden = true
+        sitbutton.isHidden = true
+        getdownbutton.isHidden = true
         sceneView.delegate = self
         sceneView.session.delegate = self
         // Set up coaching overlay.
@@ -92,6 +102,15 @@ class ViewController: UIViewController{
         // Set the delegate to ensure this gesture is only used when there are no virtual objects in the scene.
         tapGesture.delegate = self
         sceneView.addGestureRecognizer(tapGesture)
+        timer =  Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { (timer) in
+            self.count = self.count - 5
+            if self.count < 0
+            {
+                self.count = 0
+            }
+            self.moodChange()
+        }
+
         
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -106,7 +125,14 @@ class ViewController: UIViewController{
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
+        //儲存遊戲資料
+        userDefaults.set(count, forKey: "count")
+        userDefaults.set(Date(), forKey: "EndDate")
+        //        userDefaults.synchronize()
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
         session.pause()
     }
     
@@ -200,6 +226,63 @@ class ViewController: UIViewController{
         // Stop the animation with a smooth transition
         sceneView.scene.rootNode.removeAnimation(forKey: key, blendOutDuration: CGFloat(0.5))
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let location = touches.first!.location(in: sceneView)
+        
+        // Let's test if a 3D Object was touch
+        var hitTestOptions = [SCNHitTestOption: Any]()
+        hitTestOptions[SCNHitTestOption.boundingBoxOnly] = true
+        
+        let hitResults: [SCNHitTestResult]  = sceneView.hitTest(location, options: hitTestOptions)
+        
+        if hitResults.first != nil {
+            if(idle) {
+                playAnimation(key: "Walking")
+                
+            }
+            return
+        }
+
+    }
+    //MARK: -取得紀錄
+    func record()
+    {
+        let lastTimeEndDate = userDefaults.object(forKey: "EndDate") ?? Date()
+        print("上次結束時間\(String(describing: lastTimeEndDate))")
+        let now = Date()
+        print("開始時間：\(now)")
+        let interval = now.timeIntervalSince(lastTimeEndDate as! Date)
+        let time = interval / 3600.0 / 60.0
+        print("次數\(time)")
+        count = userDefaults.integer(forKey: "count")
+        count  = count - Int(time * 15)
+
+        if count < 0
+        {
+            count = 0
+        }
+    }
+    //MARK: -寵物心情變化
+    func moodChange()
+    {
+        countlabel.text = "\(count)"
+        if (count > 61)
+        {
+            petmood.image = UIImage(named: "Shiba")
+        }
+        else if (count < 21)
+        {
+            
+            petmood.image = UIImage(named: "Chihuahua")
+        }
+        else
+        {
+            petmood.image = UIImage(named: "arrow")
+        }
+
+
+    }
+
     @IBAction func feedbuttonTapped(_ sender: UIButton) {
         let bowl = sceneView.scene.rootNode.childNode(withName: "bowl", recursively: true)
         if idle{
@@ -210,23 +293,51 @@ class ViewController: UIViewController{
         }
         RunLoop.current.run(until:Date()+4)
         bowl?.isHidden = true
+        count = count + 15
+        if count > 100
+        {
+            count = 100
+        }
+        countlabel.text = "\(count)"
+        moodChange()
         
     }
     @IBAction func spinbuttonTapped(_ sender: UIButton){
         animations["spin"]?.speed = 1.5
         print("spin")
         playAnimation(key: "spin")
+        count = count + 15
+        if count > 100
+        {
+            count = 100
+        }
+        countlabel.text = "\(count)"
+        moodChange()
         
     }
     
     @IBAction func sitbuttonTapped(_ sender: UIButton) {
         print("sitdown")
         playAnimation(key: "sitdown")
+        count = count + 15
+        if count > 100
+        {
+            count = 100
+        }
+        countlabel.text = "\(count)"
+        moodChange()
     }
     
     @IBAction func getdownbuttonTapped(_ sender: UIButton) {
         print("getdown")
         playAnimation(key: "getdown")
+        count = count + 15
+        if count > 100
+        {
+            count = 100
+        }
+        countlabel.text = "\(count)"
+        moodChange()
     }
     
 }

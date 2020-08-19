@@ -29,6 +29,8 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 self.spinbutton.isHidden = false
                 self.sitbutton.isHidden = false
                 self.getdownbutton.isHidden = false
+//                self.petmood.isHidden = false
+//                self.countlabel.isHidden = false
         
             }
             else{
@@ -38,6 +40,8 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 self.spinbutton.isHidden = true
                 self.sitbutton.isHidden = true
                 self.getdownbutton.isHidden = true
+//                self.petmood.isHidden = true
+//                self.countlabel.isHidden = true
 
             }
 

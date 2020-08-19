@@ -48,8 +48,6 @@ class AnimalViewController: UIViewController{
     
 //    @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var tableView: UITableView!
-    let kind = ["全部","狗","貓","其他"]
-    let city = ["全部縣市","臺北市","新北市","基隆市","宜蘭縣","桃園縣","新竹縣","新竹市","苗栗縣","臺中市", "彰化縣","南投縣","雲林縣","嘉義縣","嘉義市","臺南市","高雄市","屏東縣","花蓮縣","臺東縣", "澎湖縣","金門縣","連江縣"]
     var orginalanimalResults = [Animal]()
     var animalResults = [Animal]()
     var activityIndicator: UIActivityIndicatorView!
@@ -73,7 +71,8 @@ class AnimalViewController: UIViewController{
             let task = URLSession.shared.dataTask(with: url) { (data, reponse, error) in
                 let decoder = JSONDecoder()
                 if let data = data, let animalResult = try? decoder.decode([Animal].self, from: data) {
-                    self.orginalanimalResults =                      animalResult.filter{$0.album_file != ""}
+//                    self.orginalanimalResults =                      animalResult.filter{$0.album_file != ""}
+                    self.orginalanimalResults = animalResult
                     self.filter()
                     DispatchQueue.main.async {
                         self.tableView.reloadDataSmoothly()
@@ -84,8 +83,6 @@ class AnimalViewController: UIViewController{
             task.resume()
         }
     }
-    
-    
     // MARK: - Prepare
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -132,6 +129,7 @@ extension AnimalViewController{
         DispatchQueue.main.async {
             self.tableView.reloadDataSmoothly()
         }
+        //儲存篩選條件
         userDefaults.set(typeButton.currentTitle, forKey: "type")
         userDefaults.set(sexButton.currentTitle, forKey: "sex")
         userDefaults.set(bodytypeButton.currentTitle, forKey: "bodytype")
@@ -142,33 +140,6 @@ extension AnimalViewController{
     //自動帶入上一次設定的篩選條件
     func filter()
     {
-        userDefaults.register(defaults: ["type": "不限"])
-        userDefaults.register(defaults: ["sex": "不限"])
-        userDefaults.register(defaults: ["bodytype": "不限"])
-        userDefaults.register(defaults: ["age": "不限"])
-        userDefaults.register(defaults: ["city": "全部縣市"])
-        if (userDefaults.string(forKey: "type") == nil)
-        {
-            userDefaults.set("不限", forKey: "type")
-        }
-        if (userDefaults.string(forKey: "sex") == nil)
-        {
-            userDefaults.set("不限", forKey: "sex")
-
-        }
-        if (userDefaults.string(forKey: "bodytype") == nil)
-        {
-            userDefaults.set("不限", forKey: "bodytype")
-        }
-        if (userDefaults.string(forKey: "age") == nil)
-        {
-            userDefaults.set("不限", forKey: "age")
-        }
-        if (userDefaults.string(forKey: "city") == nil)
-        {
-            userDefaults.set("全部縣市", forKey: "city")
-        }
-
         var results = [Animal]()
         results = self.orginalanimalResults
         DispatchQueue.main.async {
@@ -282,8 +253,6 @@ extension AnimalViewController{
         userDefaults.set(bodytypeButton.currentTitle, forKey: "bodytype")
         userDefaults.set(ageButton.currentTitle, forKey: "age")
         userDefaults.set(cityButton.currentTitle, forKey: "city")
-        //UserDefaults.standard.synchronize()
-        
 
     }
     func setupDefaultDropDown() {
@@ -476,7 +445,7 @@ extension AnimalViewController: UITableViewDataSource,UITableViewDelegate{
              cell.animalimage.kf.indicatorType = .activity
              cell.animalimage.kf.setImage(
                  with: imageUrl,
-                 placeholder: UIImage(named: "placeholderImage"),
+                 placeholder: UIImage(named: "Noimage"),
                  options: [
                      .processor(processor),
                      .scaleFactor(UIScreen.main.scale),

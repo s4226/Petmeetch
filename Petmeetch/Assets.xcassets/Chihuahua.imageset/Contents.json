@@ -2,25 +2,22 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Pen.png",
+      "filename" : "Chihuahua.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Pen@2x.png",
+      "filename" : "Chihuahua@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Pen@3x.png",
+      "filename" : "Chihuahua@3x.png",
       "scale" : "3x"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "preserves-vector-representation" : true
   }
 }

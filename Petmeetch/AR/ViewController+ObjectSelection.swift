@@ -88,6 +88,8 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
                         // MARK: - intitial animation
             if(virtualObject.modelName == "Labrador")
             {
+                // Load  the Walking animation
+                self.loadAnimation(withKey: "Walking", sceneName: "art.scnassets/Labrador/LabradorWalking", animationIdentifier: "LabradorWalking-1")
                 // Load  the breathing animation
                 self.loadAnimation(withKey: "Breathing", sceneName: "art.scnassets/Labrador/LabradorBreathing", animationIdentifier: "LabradorBreathing-1")
 
