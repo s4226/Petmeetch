@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 class AddresTableViewCell: UITableViewCell {
-
+    
     @IBOutlet var locationicon: UIImageView!
     @IBOutlet var Address: UILabel!
     override func awakeFromNib() {

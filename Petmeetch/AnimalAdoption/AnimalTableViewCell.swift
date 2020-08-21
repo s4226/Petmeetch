@@ -7,8 +7,10 @@
 //
 
 import UIKit
-
+import DOFavoriteButtonNew
 class AnimalTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var favbutton: DOFavoriteButtonNew!
 
     @IBOutlet weak var city: UILabel!{
         didSet{

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		39AC69F1F12D521FF2C2D959 /* Pods_Petmeetch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2832F39B7D93C72652528FC /* Pods_Petmeetch.framework */; };
+		F73FCAFF24EEC9F30046D255 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73FCAFD24EEC9F30046D255 /* BaseViewController.swift */; };
+		F73FCB0024EEC9F30046D255 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73FCAFE24EEC9F30046D255 /* FavoriteViewController.swift */; };
 		F7AADE6524EA3AAF00BA4595 /* TelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AADE6424EA3AAF00BA4595 /* TelTableViewCell.swift */; };
 		F7AE253824E4095700A8C6B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE253724E4095700A8C6B5 /* AppDelegate.swift */; };
 		F7AE253A24E4095700A8C6B5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AE253924E4095700A8C6B5 /* art.scnassets */; };
@@ -50,6 +52,8 @@
 		27ED513E20BCD56C696DF515 /* Pods-Petmeetch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petmeetch.release.xcconfig"; path = "Target Support Files/Pods-Petmeetch/Pods-Petmeetch.release.xcconfig"; sourceTree = "<group>"; };
 		540FB91ABC0AC3FB6FC1C9C6 /* Pods-Petmeetch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Petmeetch.debug.xcconfig"; path = "Target Support Files/Pods-Petmeetch/Pods-Petmeetch.debug.xcconfig"; sourceTree = "<group>"; };
 		E2832F39B7D93C72652528FC /* Pods_Petmeetch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Petmeetch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73FCAFD24EEC9F30046D255 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F73FCAFE24EEC9F30046D255 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		F7AADE6424EA3AAF00BA4595 /* TelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelTableViewCell.swift; sourceTree = "<group>"; };
 		F7AE253424E4095700A8C6B5 /* Petmeetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Petmeetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AE253724E4095700A8C6B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 		F7AE257024E4105700A8C6B5 /* AnimalAdoption */ = {
 			isa = PBXGroup;
 			children = (
+				F73FCAFD24EEC9F30046D255 /* BaseViewController.swift */,
+				F73FCAFE24EEC9F30046D255 /* FavoriteViewController.swift */,
 				F7AE257124E4111200A8C6B5 /* OpenData.swift */,
 				F7AE257324E4112D00A8C6B5 /* CardView.swift */,
 				F7AE257524E4115D00A8C6B5 /* AnimalTableViewCell.swift */,
@@ -353,6 +359,7 @@
 				F7AE259124E4134600A8C6B5 /* RemarkTableViewCell.swift in Sources */,
 				F7AE255124E40BF200A8C6B5 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				F7AE255D24E40D1800A8C6B5 /* VirtualObjectARView.swift in Sources */,
+				F73FCB0024EEC9F30046D255 /* FavoriteViewController.swift in Sources */,
 				F7AE259424E4136500A8C6B5 /* AnimalViewController.swift in Sources */,
 				F7AE255324E40C2600A8C6B5 /* ViewController+Actions.swift in Sources */,
 				F7AE256A24E40E1800A8C6B5 /* StatusViewController.swift in Sources */,
@@ -377,6 +384,7 @@
 				F7AE258D24E4132000A8C6B5 /* OtherTableViewCell.swift in Sources */,
 				F7AE255724E40CA200A8C6B5 /* ViewController+CoachingOverlay.swift in Sources */,
 				F7AE255924E40CD500A8C6B5 /* VirtualObjectInteraction.swift in Sources */,
+				F73FCAFF24EEC9F30046D255 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

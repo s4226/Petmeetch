@@ -9,6 +9,9 @@
 import UIKit
 import Kingfisher
 import DropDown
+import XLPagerTabStrip
+import DOFavoriteButtonNew
+
 let cityDict: [String : String] = ["2": "臺北市","3": "新北市", "4": "基隆市","5": "宜蘭縣","6": "桃園縣","7": "新竹縣","8": "新竹市", "9": "苗栗縣","10": "臺中市","11": "彰化縣","12": "南投縣","13": "雲林縣","14": "嘉義縣","15": "嘉義市", "16": "臺南市", "17": "高雄市","18": "屏東縣","19": "花蓮縣", "20" :"臺東縣","21": "澎湖縣","22": "金門縣","23": "連江縣"]
 let pickercity: [String : Int] = ["臺北市":2,"新北市":3,"基隆市":4,"宜蘭縣":5,"桃園縣":6,"新竹縣":7,"新竹市":8, "苗栗縣":9,"臺中市": 10,"彰化縣":11,"南投縣":12,"雲林縣":13,"嘉義縣":14,"嘉義市":15,"臺南市":16, "高雄市":17,"屏東縣":18,"花蓮縣":19,"臺東縣": 20,"澎湖縣":21,"金門縣":22,"連江縣":23]
 let ageDict:[String: String] = ["幼年":"CHILD","成年":"ADULT"]
@@ -21,6 +24,7 @@ let bodytype:[String: String] = ["SMALL": "小型","MEDIUM":"中型","BIG":"大�
 let age:[String: String] = ["CHILD":"幼年","ADULT":"成年"]
 let sterilization:[String: String] = ["T":"已絕育","F":"未絕育","N":"未輸入"]
 class AnimalViewController: UIViewController{
+    
     //MARK: - Properties
     @IBOutlet weak var typeButton: UIButton!
     @IBOutlet weak var sexButton: UIButton!
@@ -28,6 +32,10 @@ class AnimalViewController: UIViewController{
     @IBOutlet weak var ageButton: UIButton!
     @IBOutlet weak var cityButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
+    
+    var AnimalDataIsVisted = Array(repeating: false, count: 9999)
+    
+
     
     //MARK: - DropDown's
     let typeDropDown = DropDown()
@@ -58,13 +66,14 @@ class AnimalViewController: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.delaysContentTouches = false
         activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = UIColor.darkGray
         activityIndicator.center = self.tableView.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
         self.view.addSubview(activityIndicator)
-        
+        navigationItem.title = "尋找中.."
         if let urlStr = OpenDataUrl.animal.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlStr) {
             print(url)
 
@@ -96,7 +105,6 @@ class AnimalViewController: UIViewController{
             }
         }
     }
-    
 
 }
 extension AnimalViewController{
@@ -119,6 +127,7 @@ extension AnimalViewController{
     }
     //恢復預設篩選
     @IBAction func resetfilter(_ sender: UIButton){
+        AnimalDataIsVisted = Array(repeating: false, count: 9999)
         typeButton.setTitle("不限", for: .normal)
         sexButton.setTitle("不限", for: .normal)
         bodytypeButton.setTitle("不限", for: .normal)
@@ -140,6 +149,29 @@ extension AnimalViewController{
     //自動帶入上一次設定的篩選條件
     func filter()
     {
+        if userDefaults.string(forKey: "type") == nil
+        {
+            typeButton.setTitle("不限", for: .normal)
+
+            
+        }
+        if userDefaults.string(forKey: "sex") == nil
+        {
+            sexButton.setTitle("不限", for: .normal)
+        }
+        if userDefaults.string(forKey: "bodytype") == nil
+        {
+            bodytypeButton.setTitle("不限", for: .normal)
+        }
+        if userDefaults.string(forKey: "age") == nil
+        {
+            ageButton.setTitle("不限", for: .normal)
+        }
+        if userDefaults.string(forKey: "city") == nil
+        {
+            cityButton.setTitle("全部縣市", for: .normal)
+        }
+        
         var results = [Animal]()
         results = self.orginalanimalResults
         DispatchQueue.main.async {
@@ -195,7 +227,7 @@ extension AnimalViewController{
     //根據篩選條件搜尋符合資料
     @IBAction func filterButton(_ sender: UIButton){
         
-        
+        AnimalDataIsVisted = Array(repeating: false, count: 9999)
         var results = [Animal]()
         results = self.orginalanimalResults
         if (typeButton.currentTitle == "不限")
@@ -319,7 +351,7 @@ extension AnimalViewController{
     func setupcityDropDown(){
         cityDropDown.anchorView = cityButton
         
-        cityDropDown.bottomOffset = CGPoint(x: 0, y: cityButton.bounds.height)
+        cityDropDown.bottomOffset = CGPoint(x: 20, y: cityButton.bounds.height)
         
         cityDropDown.dataSource = ["全部縣市","臺北市","新北市","基隆市","宜蘭縣","桃園縣","新竹縣","新竹市","苗栗縣","臺中市", "彰化縣","南投縣","雲林縣","嘉義縣","嘉義市","臺南市","高雄市","屏東縣","花蓮縣","臺東縣", "澎湖縣","金門縣","連江縣"]
         cityButton.setTitle(userDefaults.string(forKey: "city") ?? "全部縣市", for: .normal)
@@ -390,6 +422,7 @@ extension AnimalViewController{
             self.tableView.reloadDataSmoothly()
         }
     }
+
 }
 extension UITableView {
   func reloadDataSmoothly() {
@@ -425,6 +458,7 @@ extension AnimalViewController: UITableViewDataSource,UITableViewDelegate{
             navigationItem.title = "浪浪數量:\(animalResults.count)"
 
         }
+        userDefaults.set(animalResults.count, forKey:"animalResultscount")
         return animalResults.count
         
 
@@ -445,7 +479,7 @@ extension AnimalViewController: UITableViewDataSource,UITableViewDelegate{
              cell.animalimage.kf.indicatorType = .activity
              cell.animalimage.kf.setImage(
                  with: imageUrl,
-                 placeholder: UIImage(named: "Noimage"),
+                 placeholder: UIImage(named: "shiba-1"),
                  options: [
                      .processor(processor),
                      .scaleFactor(UIScreen.main.scale),
@@ -467,10 +501,36 @@ extension AnimalViewController: UITableViewDataSource,UITableViewDelegate{
              cell.sex.text = sex[String(animalData.animal_sex)]!
             // cell.id.text = "ID: " + String(animalData.animal_id)
              cell.bodytype.text =  bodytype[String(animalData.animal_bodytype)]!
-             
-
+             cell.favbutton.addTarget(self, action: #selector(self.tappedButton), for: .touchUpInside)
+        cell.favbutton.tag = indexPath.row
+        if AnimalDataIsVisted[indexPath.row]{
+            cell.favbutton.isSelected = true
+        }
+        else{
+            cell.favbutton.isSelected = false
+        }
              return cell
+        
 
     }
-    
+    @objc func tappedButton(sender: DOFavoriteButtonNew) {
+        if sender.isSelected
+        {
+            sender.deselect()
+            self.AnimalDataIsVisted[sender.tag] = false
+
+        }
+        else
+        {
+            sender.select()
+            self.AnimalDataIsVisted[sender.tag] = true
+
+        }
+    }
+        
+}
+extension AnimalViewController:IndicatorInfoProvider{
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "領養資訊")
+    }
 }
