@@ -39,10 +39,9 @@ class BaseViewController: ButtonBarPagerTabStripViewController{
     func loadDesign(){
         // change selected bar color
         self.settings.style.selectedBarHeight = 1
-        self.settings.style.selectedBarBackgroundColor = #colorLiteral(red: 1, green: 0.8026024103, blue: 0.7067040801, alpha: 1)
-        self.settings.style.buttonBarBackgroundColor = #colorLiteral(red: 1, green: 0.8026024103, blue: 0.7067040801, alpha: 1)
-        self.settings.style.buttonBarItemBackgroundColor = #colorLiteral(red: 1, green: 0.8026024103, blue: 0.7067040801, alpha: 1)
-        self.settings.style.selectedBarBackgroundColor = .white
+        self.settings.style.selectedBarBackgroundColor = #colorLiteral(red: 0.8737248778, green: 0.4631153941, blue: 0.4026138783, alpha: 1)
+        self.settings.style.buttonBarBackgroundColor = #colorLiteral(red: 0.8737248778, green: 0.4631153941, blue: 0.4026138783, alpha: 1)
+        self.settings.style.buttonBarItemBackgroundColor = #colorLiteral(red: 0.8737248778, green: 0.4631153941, blue: 0.4026138783, alpha: 1)
         self.settings.style.buttonBarItemFont = .systemFont(ofSize: 16)
         self.settings.style.selectedBarHeight = 2.0
         self.settings.style.buttonBarMinimumLineSpacing = 0
@@ -55,8 +54,8 @@ class BaseViewController: ButtonBarPagerTabStripViewController{
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
 
-            oldCell?.label.textColor = .orange
-            newCell?.label.textColor = .orange
+            oldCell?.label.textColor = .white
+            newCell?.label.textColor = .white
 
         }
     }

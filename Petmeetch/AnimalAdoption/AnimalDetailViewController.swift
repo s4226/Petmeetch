@@ -29,7 +29,7 @@ class AnimalDetailViewController: UIViewController{
                 AnimalImage.kf.indicatorType = .activity
                     AnimalImage.kf.setImage(
             with: imageUrl,
-            placeholder: UIImage(named: "Noimage"),
+            placeholder: UIImage(named: "shiba-1"),
             options: [
                 .processor(processor),
                 .scaleFactor(UIScreen.main.scale),

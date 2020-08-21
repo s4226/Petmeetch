@@ -33,6 +33,7 @@ class AnimalViewController: UIViewController{
     @IBOutlet weak var cityButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
     
+    
     var AnimalDataIsVisted = Array(repeating: false, count: 9999)
     
 
@@ -128,10 +129,10 @@ extension AnimalViewController{
     //恢復預設篩選
     @IBAction func resetfilter(_ sender: UIButton){
         AnimalDataIsVisted = Array(repeating: false, count: 9999)
-        typeButton.setTitle("不限", for: .normal)
-        sexButton.setTitle("不限", for: .normal)
-        bodytypeButton.setTitle("不限", for: .normal)
-        ageButton.setTitle("不限", for: .normal)
+        typeButton.setTitle("類型", for: .normal)
+        sexButton.setTitle("性別", for: .normal)
+        bodytypeButton.setTitle("類型", for: .normal)
+        ageButton.setTitle("年齡", for: .normal)
         cityButton.setTitle("全部縣市", for: .normal)
         self.animalResults = self.orginalanimalResults
         
@@ -151,21 +152,21 @@ extension AnimalViewController{
     {
         if userDefaults.string(forKey: "type") == nil
         {
-            typeButton.setTitle("不限", for: .normal)
+            typeButton.setTitle("類型", for: .normal)
 
             
         }
         if userDefaults.string(forKey: "sex") == nil
         {
-            sexButton.setTitle("不限", for: .normal)
+            sexButton.setTitle("性別", for: .normal)
         }
         if userDefaults.string(forKey: "bodytype") == nil
         {
-            bodytypeButton.setTitle("不限", for: .normal)
+            bodytypeButton.setTitle("體型", for: .normal)
         }
         if userDefaults.string(forKey: "age") == nil
         {
-            ageButton.setTitle("不限", for: .normal)
+            ageButton.setTitle("年齡", for: .normal)
         }
         if userDefaults.string(forKey: "city") == nil
         {
@@ -175,7 +176,7 @@ extension AnimalViewController{
         var results = [Animal]()
         results = self.orginalanimalResults
         DispatchQueue.main.async {
-            if (self.typeButton.currentTitle == "不限")
+            if (self.typeButton.currentTitle == "類別")
             {
                 self.animalResults = results
             }
@@ -184,7 +185,7 @@ extension AnimalViewController{
                 results = results.filter{$0.animal_kind == kindDict[self.typeButton.currentTitle!]}
                 self.animalResults = results
             }
-            if (self.sexButton.currentTitle == "不限")
+            if (self.sexButton.currentTitle == "性別")
             {
                 self.animalResults = results
             }
@@ -193,7 +194,7 @@ extension AnimalViewController{
                 results = results.filter{$0.animal_sex == sexDict[self.sexButton.currentTitle!]}
                 self.animalResults = results
             }
-            if (self.bodytypeButton.currentTitle == "不限")
+            if (self.bodytypeButton.currentTitle == "體型")
             {
                 self.animalResults = results
             }
@@ -202,7 +203,7 @@ extension AnimalViewController{
                 results = results.filter{$0.animal_bodytype == bodyTypeDict[self.bodytypeButton.currentTitle!]}
                 self.animalResults = results
             }
-            if (self.ageButton.currentTitle == "不限")
+            if (self.ageButton.currentTitle == "年齡")
             {
                 self.animalResults = results
             }
@@ -230,7 +231,7 @@ extension AnimalViewController{
         AnimalDataIsVisted = Array(repeating: false, count: 9999)
         var results = [Animal]()
         results = self.orginalanimalResults
-        if (typeButton.currentTitle == "不限")
+        if (typeButton.currentTitle == "類型")
         {
             self.animalResults = results
         }
@@ -239,7 +240,7 @@ extension AnimalViewController{
             results = results.filter{$0.animal_kind == kindDict[typeButton.currentTitle!]}
             self.animalResults = results
         }
-        if (sexButton.currentTitle == "不限")
+        if (sexButton.currentTitle == "性別")
         {
             self.animalResults = results
         }
@@ -248,7 +249,7 @@ extension AnimalViewController{
             results = results.filter{$0.animal_sex == sexDict[sexButton.currentTitle!]}
             self.animalResults = results
         }
-        if (bodytypeButton.currentTitle == "不限")
+        if (bodytypeButton.currentTitle == "體型")
         {
             self.animalResults = results
         }
@@ -257,7 +258,7 @@ extension AnimalViewController{
             results = results.filter{$0.animal_bodytype == bodyTypeDict[bodytypeButton.currentTitle!]}
             self.animalResults = results
         }
-        if (ageButton.currentTitle == "不限")
+        if (ageButton.currentTitle == "年齡")
         {
             self.animalResults = results
         }
@@ -308,7 +309,7 @@ extension AnimalViewController{
         
         typeDropDown.bottomOffset = CGPoint(x: 0, y: typeButton.bounds.height)
         typeButton.setTitle(userDefaults.string(forKey: "type") ?? "不限", for: .normal)
-        typeDropDown.dataSource = ["不限","狗","貓"]
+        typeDropDown.dataSource = ["類型","狗","貓"]
         typeDropDown.selectionAction = { [weak self] (index, item) in
             self?.typeButton.setTitle(item, for: .normal)
         }
@@ -319,7 +320,7 @@ extension AnimalViewController{
         
         sexDropDown.bottomOffset = CGPoint(x: 0, y: sexButton.bounds.height)
         sexButton.setTitle(userDefaults.string(forKey: "sex") ?? "不限", for: .normal)
-        sexDropDown.dataSource = ["不限","公","母"]
+        sexDropDown.dataSource = ["性別","公","母"]
         sexDropDown.selectionAction = { [weak self] (index, item) in
             self?.sexButton.setTitle(item, for: .normal)
         }
@@ -331,7 +332,7 @@ extension AnimalViewController{
         
         bodytypeDropDown.bottomOffset = CGPoint(x: 0, y: bodytypeButton.bounds.height)
         bodytypeButton.setTitle(userDefaults.string(forKey: "bodytype") ?? "不限", for: .normal)
-        bodytypeDropDown.dataSource = ["不限","小型","中型","大型"]
+        bodytypeDropDown.dataSource = ["體型","小型","中型","大型"]
                 bodytypeDropDown.selectionAction = { [weak self] (index, item) in
             self?.bodytypeButton.setTitle(item, for: .normal)
         }
@@ -342,7 +343,7 @@ extension AnimalViewController{
         
         ageDropDown.bottomOffset = CGPoint(x: 0, y: ageButton.bounds.height)
         ageButton.setTitle(userDefaults.string(forKey: "age") ?? "不限", for: .normal)
-        ageDropDown.dataSource = ["不限","幼年","成年"]
+        ageDropDown.dataSource = ["年齡","幼年","成年"]
         ageDropDown.selectionAction = { [weak self] (index, item) in
             self?.ageButton.setTitle(item, for: .normal)
         }
@@ -422,7 +423,7 @@ extension AnimalViewController{
             self.tableView.reloadDataSmoothly()
         }
     }
-
+    
 }
 extension UITableView {
   func reloadDataSmoothly() {
