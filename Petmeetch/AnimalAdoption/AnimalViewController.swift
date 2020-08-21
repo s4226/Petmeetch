@@ -74,7 +74,6 @@ class AnimalViewController: UIViewController{
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
         self.view.addSubview(activityIndicator)
-        navigationItem.title = "尋找中.."
         if let urlStr = OpenDataUrl.animal.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlStr) {
             print(url)
 
@@ -130,10 +129,15 @@ extension AnimalViewController{
     @IBAction func resetfilter(_ sender: UIButton){
         AnimalDataIsVisted = Array(repeating: false, count: 9999)
         typeButton.setTitle("類型", for: .normal)
+        typeButton.contentHorizontalAlignment = .center
         sexButton.setTitle("性別", for: .normal)
-        bodytypeButton.setTitle("類型", for: .normal)
+        sexButton.contentHorizontalAlignment = .left
+        bodytypeButton.setTitle("體型", for: .normal)
+        bodytypeButton.contentHorizontalAlignment = .left
         ageButton.setTitle("年齡", for: .normal)
-        cityButton.setTitle("全部縣市", for: .normal)
+        cityButton.contentHorizontalAlignment = .left
+        cityButton.setTitle("縣市", for: .normal)
+        cityButton.contentHorizontalAlignment = .left
         self.animalResults = self.orginalanimalResults
         
         DispatchQueue.main.async {
@@ -170,13 +174,13 @@ extension AnimalViewController{
         }
         if userDefaults.string(forKey: "city") == nil
         {
-            cityButton.setTitle("全部縣市", for: .normal)
+            cityButton.setTitle("縣市", for: .normal)
         }
         
         var results = [Animal]()
         results = self.orginalanimalResults
         DispatchQueue.main.async {
-            if (self.typeButton.currentTitle == "類別")
+            if (self.typeButton.currentTitle == "類型")
             {
                 self.animalResults = results
             }
@@ -212,7 +216,7 @@ extension AnimalViewController{
                 results = results.filter{$0.animal_age == ageDict[self.ageButton.currentTitle!]}
                 self.animalResults = results
             }
-            if (self.cityButton.currentTitle == "全部縣市")
+            if (self.cityButton.currentTitle == "縣市")
             {
                 self.animalResults = results
             }
@@ -267,7 +271,7 @@ extension AnimalViewController{
             results = results.filter{$0.animal_age == ageDict[ageButton.currentTitle!]}
             self.animalResults = results
         }
-        if (cityButton.currentTitle == "全部縣市")
+        if (cityButton.currentTitle == "縣市")
         {
             self.animalResults = results
         }
@@ -286,6 +290,7 @@ extension AnimalViewController{
         userDefaults.set(bodytypeButton.currentTitle, forKey: "bodytype")
         userDefaults.set(ageButton.currentTitle, forKey: "age")
         userDefaults.set(cityButton.currentTitle, forKey: "city")
+        userDefaults.synchronize()
 
     }
     func setupDefaultDropDown() {
@@ -308,7 +313,7 @@ extension AnimalViewController{
         typeDropDown.anchorView = typeButton
         
         typeDropDown.bottomOffset = CGPoint(x: 0, y: typeButton.bounds.height)
-        typeButton.setTitle(userDefaults.string(forKey: "type") ?? "不限", for: .normal)
+        typeButton.setTitle(userDefaults.string(forKey: "type") ?? "類型", for: .normal)
         typeDropDown.dataSource = ["類型","狗","貓"]
         typeDropDown.selectionAction = { [weak self] (index, item) in
             self?.typeButton.setTitle(item, for: .normal)
@@ -319,7 +324,7 @@ extension AnimalViewController{
         sexDropDown.anchorView = sexButton
         
         sexDropDown.bottomOffset = CGPoint(x: 0, y: sexButton.bounds.height)
-        sexButton.setTitle(userDefaults.string(forKey: "sex") ?? "不限", for: .normal)
+        sexButton.setTitle(userDefaults.string(forKey: "sex") ?? "性別", for: .normal)
         sexDropDown.dataSource = ["性別","公","母"]
         sexDropDown.selectionAction = { [weak self] (index, item) in
             self?.sexButton.setTitle(item, for: .normal)
@@ -331,7 +336,7 @@ extension AnimalViewController{
         bodytypeDropDown.anchorView = bodytypeButton
         
         bodytypeDropDown.bottomOffset = CGPoint(x: 0, y: bodytypeButton.bounds.height)
-        bodytypeButton.setTitle(userDefaults.string(forKey: "bodytype") ?? "不限", for: .normal)
+        bodytypeButton.setTitle(userDefaults.string(forKey: "bodytype") ?? "體型", for: .normal)
         bodytypeDropDown.dataSource = ["體型","小型","中型","大型"]
                 bodytypeDropDown.selectionAction = { [weak self] (index, item) in
             self?.bodytypeButton.setTitle(item, for: .normal)
@@ -342,7 +347,7 @@ extension AnimalViewController{
         ageDropDown.anchorView = ageButton
         
         ageDropDown.bottomOffset = CGPoint(x: 0, y: ageButton.bounds.height)
-        ageButton.setTitle(userDefaults.string(forKey: "age") ?? "不限", for: .normal)
+        ageButton.setTitle(userDefaults.string(forKey: "age") ?? "年齡", for: .normal)
         ageDropDown.dataSource = ["年齡","幼年","成年"]
         ageDropDown.selectionAction = { [weak self] (index, item) in
             self?.ageButton.setTitle(item, for: .normal)
@@ -354,8 +359,8 @@ extension AnimalViewController{
         
         cityDropDown.bottomOffset = CGPoint(x: 20, y: cityButton.bounds.height)
         
-        cityDropDown.dataSource = ["全部縣市","臺北市","新北市","基隆市","宜蘭縣","桃園縣","新竹縣","新竹市","苗栗縣","臺中市", "彰化縣","南投縣","雲林縣","嘉義縣","嘉義市","臺南市","高雄市","屏東縣","花蓮縣","臺東縣", "澎湖縣","金門縣","連江縣"]
-        cityButton.setTitle(userDefaults.string(forKey: "city") ?? "全部縣市", for: .normal)
+        cityDropDown.dataSource = ["縣市","臺北市","新北市","基隆市","宜蘭縣","桃園縣","新竹縣","新竹市","苗栗縣","臺中市", "彰化縣","南投縣","雲林縣","嘉義縣","嘉義市","臺南市","高雄市","屏東縣","花蓮縣","臺東縣", "澎湖縣","金門縣","連江縣"]
+        cityButton.setTitle(userDefaults.string(forKey: "city") ?? "縣市", for: .normal)
 
         cityDropDown.selectionAction = { [weak self] (index, item) in
             self?.cityButton.setTitle(item, for: .normal)
@@ -363,54 +368,54 @@ extension AnimalViewController{
     }
     func updateData(){
         
-        if (((typeButton.currentTitle == "不限") || (typeButton.currentTitle == "類型")) && ((sexButton.currentTitle == "不限") || (sexButton.currentTitle == "性別")) && ((bodytypeButton.currentTitle == "不限") || (bodytypeButton.currentTitle == "體型")) && ((ageButton.currentTitle == "不限") || (ageButton.currentTitle == "年齡")) && ((cityButton.currentTitle == "全部縣市") || (cityButton.currentTitle == "所在縣市")))
+        if (typeButton.currentTitle == "類型" && sexButton.currentTitle == "性別" && bodytypeButton.currentTitle == "體型" && ageButton.currentTitle == "年齡" && cityButton.currentTitle == "縣市")
         {
             self.animalResults = self.orginalanimalResults
             
         }
-        else if (((typeButton.currentTitle == "不限") || (typeButton.currentTitle == "類型")) && ((sexButton.currentTitle == "不限") || (sexButton.currentTitle == "性別")) && ((bodytypeButton.currentTitle == "不限") || (bodytypeButton.currentTitle == "體型")) && ((ageButton.currentTitle == "不限") || (ageButton.currentTitle == "年齡")))
+        else if (typeButton.currentTitle == "類型" && sexButton.currentTitle == "性別" && bodytypeButton.currentTitle == "體型" && ageButton.currentTitle == "年齡")
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_area_pkid == pickercity[cityButton.currentTitle!]}
             
         }
-        else if (((typeButton.currentTitle == "不限") || (typeButton.currentTitle == "類型")) && ((sexButton.currentTitle == "不限") || (sexButton.currentTitle == "性別")) && ((bodytypeButton.currentTitle == "不限") || (bodytypeButton.currentTitle == "體型"))  && ((cityButton.currentTitle == "全部縣市") || (cityButton.currentTitle == "所在縣市")))
+        else if (typeButton.currentTitle == "類型" && sexButton.currentTitle == "性別" && bodytypeButton.currentTitle == "體型"  && cityButton.currentTitle == "縣市")
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_age == ageDict[ageButton.currentTitle!]}
         }
-        else if (((typeButton.currentTitle == "不限") || (typeButton.currentTitle == "類型")) && ((sexButton.currentTitle == "不限") || (sexButton.currentTitle == "性別")) && ((ageButton.currentTitle == "不限") || (ageButton.currentTitle == "年齡")) && ((cityButton.currentTitle == "全部縣市") || (cityButton.currentTitle == "所在縣市")))
+        else if (typeButton.currentTitle == "類型" && sexButton.currentTitle == "性別" && ageButton.currentTitle == "年齡" && cityButton.currentTitle == "縣市")
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_bodytype == bodyTypeDict[bodytypeButton.currentTitle!]}
             
         }
-        else if (((typeButton.currentTitle == "不限") || (typeButton.currentTitle == "類型")) && ((bodytypeButton.currentTitle == "不限") || (bodytypeButton.currentTitle == "體型")) && ((ageButton.currentTitle == "不限") || (ageButton.currentTitle == "年齡")) && ((cityButton.currentTitle == "全部縣市") || (cityButton.currentTitle == "所在縣市")))
+        else if (typeButton.currentTitle == "類型" && bodytypeButton.currentTitle == "體型" && ageButton.currentTitle == "年齡" && cityButton.currentTitle == "縣市")
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_sex == sexDict[sexButton.currentTitle!]}
         }
-        else if (((sexButton.currentTitle == "不限") || (sexButton.currentTitle == "性別")) && ((bodytypeButton.currentTitle == "不限") || (bodytypeButton.currentTitle == "體型")) && ((ageButton.currentTitle == "不限") || (ageButton.currentTitle == "年齡")) && ((cityButton.currentTitle == "全部縣市") || (cityButton.currentTitle == "所在縣市")))
+        else if (sexButton.currentTitle == "性別" && bodytypeButton.currentTitle == "體型" && ageButton.currentTitle == "年齡" && cityButton.currentTitle == "縣市")
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_kind  == kindDict[typeButton.currentTitle!]}
         }
-        else if (((typeButton.currentTitle == "不限") || (typeButton.currentTitle == "類型")) && ((sexButton.currentTitle == "不限") || (sexButton.currentTitle == "性別")) && ((bodytypeButton.currentTitle == "不限") || (bodytypeButton.currentTitle == "體型")) )
+        else if (typeButton.currentTitle == "類型" && sexButton.currentTitle == "性別" && bodytypeButton.currentTitle == "體型")
         {
             
             self.animalResults = self.orginalanimalResults.filter{$0.animal_age == ageDict[ageButton.currentTitle!] && $0.animal_area_pkid == pickercity[cityButton.currentTitle!]}
         }
         
-        else if cityButton.currentTitle == "全部縣市"
+        else if cityButton.currentTitle == "縣市"
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_kind == kindDict[typeButton.currentTitle!] && $0.animal_sex == sexDict[sexButton.currentTitle!] && $0.animal_bodytype == bodyTypeDict[bodytypeButton.currentTitle!] && $0.animal_age == ageDict[ageButton.currentTitle!]}
 
-        }else if ageButton.currentTitle == "不限"
+        }else if ageButton.currentTitle == "年齡"
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_kind == kindDict[typeButton.currentTitle!] && $0.animal_sex == sexDict[sexButton.currentTitle!] && $0.animal_bodytype == bodyTypeDict[bodytypeButton.currentTitle!] && $0.animal_area_pkid == pickercity[cityButton.currentTitle!]}
-        }else if bodytypeButton.currentTitle == "不限"
+        }else if bodytypeButton.currentTitle == "體型"
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_kind == kindDict[typeButton.currentTitle!] && $0.animal_sex == sexDict[sexButton.currentTitle!] && $0.animal_age == ageDict[ageButton.currentTitle!] && $0.animal_area_pkid ==  pickercity[cityButton.currentTitle!]}
-        }else if sexButton.currentTitle == "不限"
+        }else if sexButton.currentTitle == "性別"
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_kind == kindDict[typeButton.currentTitle!] && $0.animal_bodytype == bodyTypeDict[bodytypeButton.currentTitle!] && $0.animal_age == ageDict[ageButton.currentTitle!] && $0.animal_area_pkid ==  pickercity[cityButton.currentTitle!]}
             
-        }else if typeButton.currentTitle == "不限"
+        }else if typeButton.currentTitle == "類型"
         {
             self.animalResults = self.orginalanimalResults.filter{$0.animal_sex == sexDict[sexButton.currentTitle!] && $0.animal_bodytype == bodyTypeDict[bodytypeButton.currentTitle!] && $0.animal_age == ageDict[ageButton.currentTitle!] && $0.animal_area_pkid ==  pickercity[cityButton.currentTitle!]}
         }

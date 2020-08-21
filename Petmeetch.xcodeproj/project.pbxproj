@@ -14,7 +14,6 @@
 		F7AE253824E4095700A8C6B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE253724E4095700A8C6B5 /* AppDelegate.swift */; };
 		F7AE253A24E4095700A8C6B5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AE253924E4095700A8C6B5 /* art.scnassets */; };
 		F7AE253F24E4095700A8C6B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AE253D24E4095700A8C6B5 /* Main.storyboard */; };
-		F7AE254124E4095800A8C6B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AE254024E4095800A8C6B5 /* Assets.xcassets */; };
 		F7AE254424E4095800A8C6B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AE254224E4095800A8C6B5 /* LaunchScreen.storyboard */; };
 		F7AE254C24E409B500A8C6B5 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE254B24E409B500A8C6B5 /* SelectionViewController.swift */; };
 		F7AE254F24E40BAD00A8C6B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE254E24E40BAD00A8C6B5 /* ViewController.swift */; };
@@ -46,6 +45,7 @@
 		F7AE259124E4134600A8C6B5 /* RemarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE258F24E4134600A8C6B5 /* RemarkTableViewCell.swift */; };
 		F7AE259224E4134600A8C6B5 /* RemarkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7AE259024E4134600A8C6B5 /* RemarkTableViewCell.xib */; };
 		F7AE259424E4136500A8C6B5 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE259324E4136500A8C6B5 /* AnimalViewController.swift */; };
+		F7CB0E6024EFA7D700E3F6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CB0E5F24EFA7D700E3F6FD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,6 @@
 		F7AE253724E4095700A8C6B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7AE253924E4095700A8C6B5 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		F7AE253E24E4095700A8C6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F7AE254024E4095800A8C6B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7AE254324E4095800A8C6B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7AE254524E4095800A8C6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7AE254B24E409B500A8C6B5 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		F7AE258F24E4134600A8C6B5 /* RemarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarkTableViewCell.swift; sourceTree = "<group>"; };
 		F7AE259024E4134600A8C6B5 /* RemarkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemarkTableViewCell.xib; sourceTree = "<group>"; };
 		F7AE259324E4136500A8C6B5 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
+		F7CB0E5F24EFA7D700E3F6FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +126,7 @@
 		F7AE252B24E4095700A8C6B5 = {
 			isa = PBXGroup;
 			children = (
+				F7CB0E5F24EFA7D700E3F6FD /* Assets.xcassets */,
 				F7AE253624E4095700A8C6B5 /* Petmeetch */,
 				F7AE253524E4095700A8C6B5 /* Products */,
 				7997B4A0088059F1F6CDB47C /* Pods */,
@@ -149,7 +150,6 @@
 				F7AE253724E4095700A8C6B5 /* AppDelegate.swift */,
 				F7AE253924E4095700A8C6B5 /* art.scnassets */,
 				F7AE253D24E4095700A8C6B5 /* Main.storyboard */,
-				F7AE254024E4095800A8C6B5 /* Assets.xcassets */,
 				F7AE254224E4095800A8C6B5 /* LaunchScreen.storyboard */,
 				F7AE254524E4095800A8C6B5 /* Info.plist */,
 				F7AE254B24E409B500A8C6B5 /* SelectionViewController.swift */,
@@ -300,8 +300,8 @@
 				F7AE258424E412B200A8C6B5 /* AnimalDetailTableViewCell.xib in Resources */,
 				F7AE258024E4128A00A8C6B5 /* AddresTableViewCell.xib in Resources */,
 				F7AE258E24E4132000A8C6B5 /* OtherTableViewCell.xib in Resources */,
-				F7AE254124E4095800A8C6B5 /* Assets.xcassets in Resources */,
 				F7AE253F24E4095700A8C6B5 /* Main.storyboard in Resources */,
+				F7CB0E6024EFA7D700E3F6FD /* Assets.xcassets in Resources */,
 				F7AE259224E4134600A8C6B5 /* RemarkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
