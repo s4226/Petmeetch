@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 import MapKit
 import SafariServices
+import SnapKit
 class AnimalDetailViewController: UIViewController{
     
     @IBOutlet var tableView: UITableView!
@@ -23,6 +24,9 @@ class AnimalDetailViewController: UIViewController{
         tableView.dataSource = self
         tableView.separatorStyle = .singleLine
         tableView.separatorInset = .zero
+        tableView.snp.makeConstraints{(make) in
+            make.top.bottom.left.right.equalTo(self.view)
+        }
         let imageUrl = URL(string: animalData.album_file)
         let processor = DownsamplingImageProcessor(size: AnimalImage.bounds.size)
             |> RoundCornerImageProcessor(cornerRadius: 0)

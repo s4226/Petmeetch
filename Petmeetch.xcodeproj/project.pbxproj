@@ -126,7 +126,6 @@
 		F7AE252B24E4095700A8C6B5 = {
 			isa = PBXGroup;
 			children = (
-				F7CB0E5F24EFA7D700E3F6FD /* Assets.xcassets */,
 				F7AE253624E4095700A8C6B5 /* Petmeetch */,
 				F7AE253524E4095700A8C6B5 /* Products */,
 				7997B4A0088059F1F6CDB47C /* Pods */,
@@ -145,6 +144,7 @@
 		F7AE253624E4095700A8C6B5 /* Petmeetch */ = {
 			isa = PBXGroup;
 			children = (
+				F7CB0E5F24EFA7D700E3F6FD /* Assets.xcassets */,
 				F7AE257024E4105700A8C6B5 /* AnimalAdoption */,
 				F7AE254D24E40B8700A8C6B5 /* AR */,
 				F7AE253724E4095700A8C6B5 /* AppDelegate.swift */,

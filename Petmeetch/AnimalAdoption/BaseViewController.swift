@@ -11,12 +11,10 @@ import Kingfisher
 import DropDown
 import XLPagerTabStrip
 import DOFavoriteButtonNew
+import SnapKit
 
 class BaseViewController: ButtonBarPagerTabStripViewController{
     
-    let graySpotifyColor = UIColor(red: 21/255.0, green: 21/255.0, blue: 24/255.0, alpha: 1.0)
-    let darkGraySpotifyColor = UIColor(red: 19/255.0, green: 20/255.0, blue: 20/255.0, alpha: 1.0)
-
     var timer : Timer?
     override func viewDidLoad() {
         self.loadDesign()

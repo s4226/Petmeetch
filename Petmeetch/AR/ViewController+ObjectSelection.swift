@@ -8,7 +8,7 @@
 
 import UIKit
 import ARKit
-
+var modelname = ""
 extension ViewController: VirtualObjectSelectionViewControllerDelegate {
     
     /** Adds the specified virtual object to the scene, placed at the world-space position
@@ -28,7 +28,7 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
         virtualObject.raycast = trackedRaycast
         virtualObjectInteraction.selectedObject = virtualObject
         virtualObject.isHidden = false
-        
+        modelname = virtualObject.modelName
         
     }
     
@@ -90,15 +90,34 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
             {
                 // Load  the Walking animation
                 self.loadAnimation(withKey: "Walking", sceneName: "art.scnassets/Labrador/LabradorWalking", animationIdentifier: "LabradorWalking-1")
-                // Load  the breathing animation
-                self.loadAnimation(withKey: "Breathing", sceneName: "art.scnassets/Labrador/LabradorBreathing", animationIdentifier: "LabradorBreathing-1")
-
+                
                 // Load  the sitdown animation
                 self.loadAnimation(withKey: "sitdown", sceneName: "art.scnassets/Labrador/labradorsitdown", animationIdentifier: "labradorsitdown-1")
+                
                 // Load  the eat animation
                 self.loadAnimation(withKey: "eat", sceneName: "art.scnassets/Labrador/Labradoreat", animationIdentifier: "Labradoreat-1")
+                
                 //Load  the play animation
                 self.loadAnimation(withKey: "spin", sceneName: "art.scnassets/Labrador/LabradorPlaying", animationIdentifier: "LabradorPlaying-1")
+                
+                //Load the getdown animation
+                self.loadAnimation(withKey: "getdown", sceneName: "art.scnassets/Labrador/LabradorGetDown", animationIdentifier: "LabradorGetDown-1")
+                
+            }
+            if(virtualObject.modelName == "zgolden")
+            {
+                // Load  the walking animation
+                self.loadAnimation(withKey: "Walking", sceneName: "art.scnassets/Labrador/LabradorWalking", animationIdentifier: "LabradorWalking-1")
+                
+                // Load  the sitdown animation
+                self.loadAnimation(withKey: "sitdown", sceneName:  "art.scnassets/Labrador/labradorsitdown", animationIdentifier: "labradorsitdown-1")
+
+                // Load  the eat animation
+                self.loadAnimation(withKey: "eat", sceneName: "art.scnassets/Labrador/Labradoreat", animationIdentifier: "Labradoreat-1")
+                
+                //Load  the play animation
+                self.loadAnimation(withKey: "spin", sceneName: "art.scnassets/Labrador/LabradorPlaying", animationIdentifier: "LabradorPlaying-1")
+                
                 //Load the getdown animation
                 self.loadAnimation(withKey: "getdown", sceneName: "art.scnassets/Labrador/LabradorGetDown", animationIdentifier: "LabradorGetDown-1")
                 

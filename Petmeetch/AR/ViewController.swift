@@ -9,7 +9,9 @@
 import UIKit
 import SceneKit
 import ARKit
-
+var labradormoodcount = 0
+var goldenmoodcount = 0
+var lastTimeEndDate = Date()
 class ViewController: UIViewController{
     
     @IBOutlet var sceneView: VirtualObjectARView!
@@ -29,8 +31,6 @@ class ViewController: UIViewController{
     @IBOutlet weak var petmood: UIImageView!
     
     @IBOutlet weak var countlabel: UILabel!
-    
-    var count = 0
 
     let userDefaults = UserDefaults.standard
     
@@ -102,11 +102,29 @@ class ViewController: UIViewController{
         // Set the delegate to ensure this gesture is only used when there are no virtual objects in the scene.
         tapGesture.delegate = self
         sceneView.addGestureRecognizer(tapGesture)
-        timer =  Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { (timer) in
-            self.count = self.count - 5
-            if self.count < 0
+        timer =  Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+            self.moodChange()
+        }
+
+        timer =  Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { (timer) in
+            
+            if modelname == "Labrador"
             {
-                self.count = 0
+                labradormoodcount = labradormoodcount - 5
+                if labradormoodcount < 0
+                {
+                    labradormoodcount = 0
+                }
+
+            }
+            else if modelname == "zgolden"
+            {
+                goldenmoodcount = goldenmoodcount - 5
+                if goldenmoodcount < 0
+                {
+                    goldenmoodcount = 0
+                }
+
             }
             self.moodChange()
         }
@@ -126,7 +144,8 @@ class ViewController: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         //儲存遊戲資料
-        userDefaults.set(count, forKey: "count")
+        userDefaults.set(labradormoodcount, forKey: "labradormoodcount")
+        userDefaults.set(goldenmoodcount, forKey: "goldenmoodcount")
         userDefaults.set(Date(), forKey: "EndDate")
         //        userDefaults.synchronize()
         if timer != nil {
@@ -247,37 +266,69 @@ class ViewController: UIViewController{
     //MARK: -取得紀錄
     func record()
     {
-        let lastTimeEndDate = userDefaults.object(forKey: "EndDate") ?? Date()
+        labradormoodcount = userDefaults.integer(forKey: "labradormoodcount")
+        print(labradormoodcount)
+        goldenmoodcount = userDefaults.integer(forKey: "goldenmoodcount")
+        print(goldenmoodcount)
+        lastTimeEndDate = userDefaults.object(forKey: "EndDate") as! Date
         print("上次結束時間\(String(describing: lastTimeEndDate))")
         let now = Date()
         print("開始時間：\(now)")
-        let interval = now.timeIntervalSince(lastTimeEndDate as! Date)
+        let interval = now.timeIntervalSince(lastTimeEndDate )
         let time = interval / 3600.0 / 60.0
         print("次數\(time)")
-        count = userDefaults.integer(forKey: "count")
-        count  = count - Int(time * 15)
+        labradormoodcount  = labradormoodcount - Int(time * 15)
 
-        if count < 0
+        if labradormoodcount < 0
         {
-            count = 0
+            labradormoodcount = 0
         }
+        goldenmoodcount  = goldenmoodcount - Int(time * 15)
+
+        if goldenmoodcount < 0
+        {
+            goldenmoodcount = 0
+        }
+        moodChange()
     }
     //MARK: -寵物心情變化
     func moodChange()
     {
-        countlabel.text = "\(count)"
-        if (count > 61)
+        if modelname == "Labrador"
         {
-            petmood.image = UIImage(named: "Shiba")
+            countlabel.text = "\(labradormoodcount)"
+            if (labradormoodcount > 61)
+            {
+                petmood.image = UIImage(named: "Shiba")
+            }
+            else if (labradormoodcount < 21)
+            {
+                
+                petmood.image = UIImage(named: "Chihuahua")
+            }
+            else
+            {
+                petmood.image = UIImage(named: "arrow")
+            }
+
         }
-        else if (count < 21)
+        if modelname == "zgolden"
         {
-            
-            petmood.image = UIImage(named: "Chihuahua")
-        }
-        else
-        {
-            petmood.image = UIImage(named: "arrow")
+            countlabel.text = "\(goldenmoodcount)"
+            if (goldenmoodcount > 61)
+            {
+                petmood.image = UIImage(named: "Shiba")
+            }
+            else if (goldenmoodcount < 21)
+            {
+                
+                petmood.image = UIImage(named: "Chihuahua")
+            }
+            else
+            {
+                petmood.image = UIImage(named: "arrow")
+            }
+
         }
 
 
@@ -289,55 +340,107 @@ class ViewController: UIViewController{
             bowl?.isHidden = false
             print("eat")
             playAnimation(key: "eat")
+            if modelname == "Labrador"
+            {
+                labradormoodcount = labradormoodcount + 15
+                if labradormoodcount > 100
+                {
+                    labradormoodcount = 100
+                }
+                countlabel.text = "\(labradormoodcount)"
+                moodChange()
+            }
+            else if modelname == "zgolden"
+            {
+                goldenmoodcount = goldenmoodcount + 15
+                if goldenmoodcount > 100
+                {
+                    goldenmoodcount = 100
+                }
+                countlabel.text = "\(goldenmoodcount)"
+                moodChange()
+            }
 
         }
         RunLoop.current.run(until:Date()+4)
         bowl?.isHidden = true
-        count = count + 15
-        if count > 100
-        {
-            count = 100
-        }
-        countlabel.text = "\(count)"
-        moodChange()
-        
+
     }
     @IBAction func spinbuttonTapped(_ sender: UIButton){
         animations["spin"]?.speed = 1.5
         print("spin")
         playAnimation(key: "spin")
-        count = count + 15
-        if count > 100
+        if modelname == "Labrador"
         {
-            count = 100
+            labradormoodcount = labradormoodcount + 15
+            if labradormoodcount > 100
+            {
+                labradormoodcount = 100
+            }
+            countlabel.text = "\(labradormoodcount)"
+            moodChange()
         }
-        countlabel.text = "\(count)"
-        moodChange()
-        
+        else if modelname == "zgolden"
+        {
+            goldenmoodcount = goldenmoodcount + 15
+            if goldenmoodcount > 100
+            {
+                goldenmoodcount = 100
+            }
+            countlabel.text = "\(goldenmoodcount)"
+            moodChange()
+        }
+
     }
     
     @IBAction func sitbuttonTapped(_ sender: UIButton) {
         print("sitdown")
         playAnimation(key: "sitdown")
-        count = count + 15
-        if count > 100
+        if modelname == "Labrador"
         {
-            count = 100
+            labradormoodcount = labradormoodcount + 15
+            if labradormoodcount > 100
+            {
+                labradormoodcount = 100
+            }
+            countlabel.text = "\(labradormoodcount)"
+            moodChange()
         }
-        countlabel.text = "\(count)"
-        moodChange()
+        else if modelname == "zgolden"
+        {
+            goldenmoodcount = goldenmoodcount + 15
+            if goldenmoodcount > 100
+            {
+                goldenmoodcount = 100
+            }
+            countlabel.text = "\(goldenmoodcount)"
+            moodChange()
+        }
     }
     
     @IBAction func getdownbuttonTapped(_ sender: UIButton) {
         print("getdown")
         playAnimation(key: "getdown")
-        count = count + 15
-        if count > 100
+        if modelname == "Labrador"
         {
-            count = 100
+            labradormoodcount = labradormoodcount + 15
+            if labradormoodcount > 100
+            {
+                labradormoodcount = 100
+            }
+            countlabel.text = "\(labradormoodcount)"
+            moodChange()
         }
-        countlabel.text = "\(count)"
-        moodChange()
+        else if modelname == "zgolden"
+        {
+            goldenmoodcount = goldenmoodcount + 15
+            if goldenmoodcount > 100
+            {
+                goldenmoodcount = 100
+            }
+            countlabel.text = "\(goldenmoodcount)"
+            moodChange()
+        }
     }
     
 }
