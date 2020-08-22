@@ -21,26 +21,23 @@ class BaseViewController: ButtonBarPagerTabStripViewController{
     override func viewDidLoad() {
         self.loadDesign()
         super.viewDidLoad()
-//        view.addSubview(baseview)
+        view.addSubview(baseview)
 //        baseview.snp.makeConstraints{(make) in
 //            make.top.left.right.bottom.equalToSuperview()
-//            make.centerY.equalToSuperview()
-//            make.centerX.equalToSuperview()
+//            make.center.equalToSuperview()
+//
 //        }
-//        containerView.snp.makeConstraints{(make) in
-//            make.left.right.bottom.equalToSuperview()
-//            make.centerY.equalToSuperview()
-//            make.centerX.equalToSuperview()
-//        }
-        
-
+        containerView.snp.makeConstraints{(make) in
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalTo(36)
+        }
         
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         timer =  Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { (timer) in
-            self.navigationItem.title = "浪浪數量：\(UserDefaults.standard.integer(forKey: "animalResultscount"))"
+        self.navigationItem.title = "浪浪數量：\(UserDefaults.standard.integer(forKey: "animalResultscount"))"
         }
     }
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
