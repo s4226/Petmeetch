@@ -58,22 +58,42 @@ class AnimalViewController: UIViewController{
     
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var filterView: UIView!
     var orginalanimalResults = [Animal]()
     var animalResults = [Animal]()
     var activityIndicator: UIActivityIndicatorView!
     let userDefaults = UserDefaults.standard
     override func viewDidLoad() {
+        
+        self.filterView.addSubview(buttonView)
+        buttonView.snp.makeConstraints{(make) in
+            make.height.equalTo(30)
+            make.width.equalToSuperview()
+            make.left.top.right.equalTo(view)
+        }
+        filterView.snp.makeConstraints{(make) in
+            make.left.top.right.equalToSuperview()
+            make.width.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.height.equalTo(70)
+        }
+
+        
         setupDropDowns()
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.delaysContentTouches = false
-        
+        tableView.snp.makeConstraints{(make) in
+            make.top.equalTo(70)
+            make.left.bottom.right.equalToSuperview()
+            make.centerX.equalToSuperview()
+        }
         activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = UIColor.darkGray
-        activityIndicator.center = self.tableView.center
+        activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
         self.view.addSubview(activityIndicator)
