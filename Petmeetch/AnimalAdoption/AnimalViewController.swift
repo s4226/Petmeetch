@@ -33,6 +33,7 @@ class AnimalViewController: UIViewController{
     @IBOutlet weak var cityButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
     
+    @IBOutlet weak var stackView: UIStackView!
     var AnimalDataIsVisted = Array(repeating: false, count: 9999)
     
 
@@ -79,7 +80,10 @@ class AnimalViewController: UIViewController{
             make.height.equalTo(70)
         }
 
-        
+        stackView.setCustomSpacing(19, after: ageButton)
+        stackView.setCustomSpacing(19, after: typeButton)
+        stackView.setCustomSpacing(19, after: sexButton)
+        stackView.setCustomSpacing(18, after: bodytypeButton)
         setupDropDowns()
         super.viewDidLoad()
         tableView.delegate = self
