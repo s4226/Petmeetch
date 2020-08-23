@@ -707,7 +707,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="5Ze-FZ-6Oh" firstAttribute="leading" secondItem="UH5-em-oiZ" secondAttribute="leading" id="6oO-yO-txm"/>
+                                    <constraint firstItem="5Ze-FZ-6Oh" firstAttribute="top" secondItem="hj6-u8-jmd" secondAttribute="top" constant="36" id="DgK-xP-rgH"/>
                                     <constraint firstItem="hj6-u8-jmd" firstAttribute="leading" secondItem="UH5-em-oiZ" secondAttribute="leading" id="EEb-B3-FEg"/>
                                     <constraint firstItem="5Ze-FZ-6Oh" firstAttribute="top" secondItem="hj6-u8-jmd" secondAttribute="bottom" constant="1" id="Ld9-OI-gXD"/>
                                     <constraint firstAttribute="trailing" secondItem="hj6-u8-jmd" secondAttribute="trailing" id="h60-Zu-7YD"/>
@@ -735,7 +735,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpQ-jU-enB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1212" y="887.40629685157433"/>
+            <point key="canvasLocation" x="1208.8" y="884.70764617691157"/>
         </scene>
         <!--Favorite View Controller-->
         <scene sceneID="O2r-YV-d8h">
@@ -881,47 +881,16 @@
                                             <constraint firstAttribute="trailing" secondItem="xTA-Ae-0hQ" secondAttribute="trailing" constant="1" id="aHt-AK-kkO"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GzB-DV-XUU">
-                                        <rect key="frame" x="0.0" y="32" width="375" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pw-eN-asL">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="恢復預設"/>
-                                                <connections>
-                                                    <action selector="resetfilter:" destination="pvn-13-lli" eventType="touchUpInside" id="j2B-a8-5Bn"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYt-T0-M5Q">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
-                                                <color key="backgroundColor" red="1" green="0.81176470590000005" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="搜尋"/>
-                                                <connections>
-                                                    <action selector="filterButton:" destination="pvn-13-lli" eventType="touchUpInside" id="xCc-8T-F1W"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="MYt-T0-M5Q" firstAttribute="width" secondItem="0Pw-eN-asL" secondAttribute="width" id="Gdu-Op-v1h"/>
-                                            <constraint firstItem="MYt-T0-M5Q" firstAttribute="height" secondItem="0Pw-eN-asL" secondAttribute="height" id="ddQ-us-ml5"/>
-                                        </constraints>
-                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99933916330000006" green="0.94184160230000002" blue="0.90979951619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="GzB-DV-XUU" firstAttribute="leading" secondItem="wS2-bs-TNP" secondAttribute="leading" id="16c-Tz-DNY"/>
-                                    <constraint firstAttribute="bottom" secondItem="GzB-DV-XUU" secondAttribute="bottom" id="AGM-MD-0rB"/>
                                     <constraint firstItem="ecS-Ca-jNJ" firstAttribute="top" secondItem="wS2-bs-TNP" secondAttribute="top" id="EhK-jQ-4Os"/>
-                                    <constraint firstAttribute="trailing" secondItem="GzB-DV-XUU" secondAttribute="trailing" id="FaM-Na-fYi"/>
-                                    <constraint firstItem="GzB-DV-XUU" firstAttribute="top" secondItem="ecS-Ca-jNJ" secondAttribute="bottom" constant="2" id="Yds-vM-rQ3"/>
                                     <constraint firstAttribute="trailing" secondItem="ecS-Ca-jNJ" secondAttribute="trailing" id="bHo-uu-JzD"/>
                                     <constraint firstItem="ecS-Ca-jNJ" firstAttribute="leading" secondItem="wS2-bs-TNP" secondAttribute="leading" id="y33-RQ-X5p"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COH-KB-4du">
-                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COH-KB-4du">
+                                <rect key="frame" x="0.0" y="71" width="375" height="596"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AnimalTableViewCell" rowHeight="158" id="cbY-Tz-Ifq" customClass="AnimalTableViewCell" customModule="Petmeetch" customModuleProvider="target">
@@ -1031,16 +1000,64 @@
                                     <outlet property="delegate" destination="pvn-13-lli" id="Alg-b4-iQ4"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqY-Yy-3j2">
+                                <rect key="frame" x="0.0" y="30" width="375" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMJ-c6-Csw">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="41"/>
+                                        <color key="backgroundColor" red="0.40784313729999999" green="0.61176470589999998" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="H3d-9j-efK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="重設篩選">
+                                            <color key="titleColor" red="0.99819260840000001" green="0.8096542954" blue="0.72155189509999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetfilter:" destination="pvn-13-lli" eventType="touchUpInside" id="Ftp-1k-cvT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHK-VV-kev">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="41"/>
+                                        <color key="backgroundColor" red="0.40784313729999999" green="0.61176470589999998" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="73k-SK-WQd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="篩選">
+                                            <color key="titleColor" red="0.99819260840000001" green="0.8096542954" blue="0.72155189509999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="filterButton:" destination="pvn-13-lli" eventType="touchUpInside" id="vQ3-Q4-3VA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="dHK-VV-kev" firstAttribute="top" secondItem="XqY-Yy-3j2" secondAttribute="top" id="4Ax-7f-siB"/>
+                                    <constraint firstAttribute="bottom" secondItem="dHK-VV-kev" secondAttribute="bottom" id="G82-6W-Kdx"/>
+                                    <constraint firstAttribute="trailing" secondItem="dHK-VV-kev" secondAttribute="trailing" id="Ilk-Qd-eSG"/>
+                                    <constraint firstItem="DMJ-c6-Csw" firstAttribute="leading" secondItem="XqY-Yy-3j2" secondAttribute="leading" id="QyL-gx-YCi"/>
+                                    <constraint firstAttribute="bottom" secondItem="DMJ-c6-Csw" secondAttribute="bottom" id="jay-Wq-dnW"/>
+                                    <constraint firstItem="dHK-VV-kev" firstAttribute="width" secondItem="DMJ-c6-Csw" secondAttribute="width" id="oeO-XE-kSW"/>
+                                    <constraint firstItem="dHK-VV-kev" firstAttribute="leading" secondItem="DMJ-c6-Csw" secondAttribute="trailing" id="qMz-JT-2Uw"/>
+                                    <constraint firstItem="DMJ-c6-Csw" firstAttribute="top" secondItem="XqY-Yy-3j2" secondAttribute="top" id="ypc-MR-OAb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="wS2-bs-TNP" firstAttribute="centerY" secondItem="Isl-M6-xan" secondAttribute="centerY" id="AST-KG-BC9"/>
+                            <constraint firstItem="COH-KB-4du" firstAttribute="top" secondItem="XqY-Yy-3j2" secondAttribute="bottom" id="F6d-wh-OX1"/>
+                            <constraint firstItem="XqY-Yy-3j2" firstAttribute="trailing" secondItem="Ns9-M7-OUY" secondAttribute="trailing" id="GZh-9v-wwr"/>
                             <constraint firstItem="COH-KB-4du" firstAttribute="trailing" secondItem="wS2-bs-TNP" secondAttribute="trailing" id="Ofv-C7-r6n"/>
                             <constraint firstItem="COH-KB-4du" firstAttribute="top" secondItem="wS2-bs-TNP" secondAttribute="bottom" id="V1z-56-9Vp"/>
                             <constraint firstItem="COH-KB-4du" firstAttribute="leading" secondItem="wS2-bs-TNP" secondAttribute="leading" id="auq-Z3-pco"/>
                             <constraint firstItem="COH-KB-4du" firstAttribute="centerX" secondItem="Isl-M6-xan" secondAttribute="centerX" id="cGJ-Tr-wsw"/>
                             <constraint firstItem="COH-KB-4du" firstAttribute="leading" secondItem="Ns9-M7-OUY" secondAttribute="leading" id="kmj-aS-sjA"/>
+                            <constraint firstItem="XqY-Yy-3j2" firstAttribute="top" secondItem="Ns9-M7-OUY" secondAttribute="top" constant="30" id="lch-ov-5HC"/>
                             <constraint firstItem="COH-KB-4du" firstAttribute="bottom" secondItem="Ns9-M7-OUY" secondAttribute="bottom" id="qLa-Fs-aDU"/>
+                            <constraint firstItem="XqY-Yy-3j2" firstAttribute="leading" secondItem="Ns9-M7-OUY" secondAttribute="leading" id="wZc-u0-CHO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ns9-M7-OUY"/>
                     </view>
@@ -1052,7 +1069,7 @@
                         <outlet property="bodytypeButton" destination="SsJ-TJ-1gT" id="gnU-nW-Nlc"/>
                         <outlet property="buttonView" destination="ecS-Ca-jNJ" id="bfl-Yh-aKl"/>
                         <outlet property="cityButton" destination="GkV-Ym-jh3" id="mEd-Ri-hXm"/>
-                        <outlet property="filterButton" destination="MYt-T0-M5Q" id="Ns5-hq-uVJ"/>
+                        <outlet property="filterButton" destination="dHK-VV-kev" id="C9l-wO-LaE"/>
                         <outlet property="filterView" destination="wS2-bs-TNP" id="q1I-in-vnF"/>
                         <outlet property="sexButton" destination="zoZ-Nz-bnf" id="Olc-xw-PCa"/>
                         <outlet property="tableView" destination="COH-KB-4du" id="Mz9-9A-g8w"/>

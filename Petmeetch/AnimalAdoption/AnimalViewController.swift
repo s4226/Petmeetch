@@ -65,7 +65,7 @@ class AnimalViewController: UIViewController{
     var activityIndicator: UIActivityIndicatorView!
     let userDefaults = UserDefaults.standard
     override func viewDidLoad() {
-        
+        filterButton.titleLabel?.text = "篩選"
         self.filterView.addSubview(buttonView)
         buttonView.snp.makeConstraints{(make) in
             make.height.equalTo(30)
@@ -78,7 +78,6 @@ class AnimalViewController: UIViewController{
             make.centerX.equalToSuperview()
             make.height.equalTo(70)
         }
-
         setupDropDowns()
         super.viewDidLoad()
         tableView.delegate = self
