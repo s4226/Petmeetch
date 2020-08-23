@@ -39,7 +39,8 @@ class StatusViewController: UIViewController {
     @IBOutlet weak private var messageLabel: UILabel!
     
     @IBOutlet weak private var restartExperienceButton: UIButton!
-
+    @IBOutlet weak var Petmood: UIImageView!
+    
     // MARK: - Properties
     
     /// Trigerred when the "Restart Experience" button is tapped.

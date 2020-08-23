@@ -29,7 +29,7 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 self.spinbutton.isHidden = false
                 self.sitbutton.isHidden = false
                 self.getdownbutton.isHidden = false
-                self.petmood.isHidden = false
+                self.statusViewController.Petmood.isHidden = false
                 self.countlabel.isHidden = false
         
             }
@@ -40,7 +40,7 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 self.spinbutton.isHidden = true
                 self.sitbutton.isHidden = true
                 self.getdownbutton.isHidden = true
-                self.petmood.isHidden = true
+                self.statusViewController.Petmood.isHidden = true
                 self.countlabel.isHidden = true
 
             }

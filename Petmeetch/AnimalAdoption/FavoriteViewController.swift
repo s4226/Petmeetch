@@ -15,7 +15,7 @@ class FavoriteViewController: UIViewController{
     @IBOutlet weak var imageview: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "開發中..."
+        label.text = "開發中"
     }
 }
 extension FavoriteViewController: IndicatorInfoProvider{

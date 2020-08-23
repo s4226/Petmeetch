@@ -88,6 +88,7 @@ class AnimalViewController: UIViewController{
             make.top.equalTo(70)
             make.left.bottom.right.equalToSuperview()
             make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
         }
         activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = UIColor.darkGray

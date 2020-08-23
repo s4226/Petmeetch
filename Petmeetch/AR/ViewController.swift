@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import SnapKit
 var labradormoodcount = 0
 var goldenmoodcount = 0
 var lastTimeEndDate = Date()
@@ -28,7 +29,7 @@ class ViewController: UIViewController{
     
     var timer: Timer?
     
-    @IBOutlet weak var petmood: UIImageView!
+//    @IBOutlet weak var petmood: UIImageView!
     
     @IBOutlet weak var countlabel: UILabel!
 
@@ -77,6 +78,9 @@ class ViewController: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        sceneView.snp.makeConstraints{(make) in
+            make.left.right.top.bottom.equalToSuperview()
+        }
         record()
         moodChange()
         //MARK: -互動鍵隱藏
@@ -270,12 +274,12 @@ class ViewController: UIViewController{
         print(labradormoodcount)
         goldenmoodcount = userDefaults.integer(forKey: "goldenmoodcount")
         print(goldenmoodcount)
-        lastTimeEndDate = userDefaults.object(forKey: "EndDate") as! Date
+        lastTimeEndDate = userDefaults.object(forKey: "EndDate") as? Date ?? Date()
         print("上次結束時間\(String(describing: lastTimeEndDate))")
         let now = Date()
         print("開始時間：\(now)")
         let interval = now.timeIntervalSince(lastTimeEndDate )
-        let time = interval / 3600.0 / 60.0
+        let time = interval / 60.0
         print("次數\(time)")
         labradormoodcount  = labradormoodcount - Int(time * 15)
 
@@ -299,16 +303,16 @@ class ViewController: UIViewController{
             countlabel.text = "\(labradormoodcount)"
             if (labradormoodcount > 61)
             {
-                petmood.image = UIImage(named: "Shiba")
+                statusViewController.Petmood.image = UIImage(named: "Shiba")
             }
             else if (labradormoodcount < 21)
             {
                 
-                petmood.image = UIImage(named: "Chihuahua")
+                statusViewController.Petmood.image = UIImage(named: "Chihuahua")
             }
             else
             {
-                petmood.image = UIImage(named: "arrow")
+                statusViewController.Petmood.image = UIImage(named: "arrow")
             }
 
         }
@@ -317,16 +321,16 @@ class ViewController: UIViewController{
             countlabel.text = "\(goldenmoodcount)"
             if (goldenmoodcount > 61)
             {
-                petmood.image = UIImage(named: "Shiba")
+                statusViewController.Petmood.image = UIImage(named: "Shiba")
             }
             else if (goldenmoodcount < 21)
             {
                 
-                petmood.image = UIImage(named: "Chihuahua")
+                statusViewController.Petmood.image = UIImage(named: "Chihuahua")
             }
             else
             {
-                petmood.image = UIImage(named: "arrow")
+                statusViewController.Petmood.image = UIImage(named: "arrow")
             }
 
         }
