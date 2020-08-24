@@ -207,19 +207,19 @@ extension PhotoViewController: UIImagePickerControllerDelegate & UINavigationCon
     }
     
     func showPhotoMenu() {
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        let actCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let alert = UIAlertController(title: NSLocalizedString("Choose Image", comment: "Choose Image"), message: nil, preferredStyle: .actionSheet)
+        let actCancel = UIAlertAction(title: NSLocalizedString("Cacel", comment: "Cancel"), style: .cancel, handler: nil)
         alert.addAction(actCancel)
         
         let actPhoto =
-            UIAlertAction(title: "Take Photo",
+            UIAlertAction(title: NSLocalizedString("Take Photo", comment: "Take Photo"),
                                      style: .default,
                                      handler: {
                                         _ in self.takePhotoWithCamera()
         })
         alert.addAction(actPhoto)
         
-        let actLibrary = UIAlertAction(title: "Choose From Library",
+        let actLibrary = UIAlertAction(title: NSLocalizedString("Choose From Library", comment: "Choose From Library"),
                                        style: .default,
                                        handler: {
                                         _ in self.choosePhotoFromLibrary()

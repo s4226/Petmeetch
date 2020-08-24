@@ -10,6 +10,7 @@ import UIKit
 
 class SelectionViewController: UIViewController {
     
+    @IBOutlet weak var mainscreenImage: UIImageView!
     @IBAction func matchTapped(_sender: Any){
         self.performSegue(withIdentifier: "match", sender: self)
 
@@ -25,6 +26,11 @@ class SelectionViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let image = UIImage()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+        self.navigationController?.navigationBar.shadowImage = image
 
         // Do any additional setup after loading the view.
     }
