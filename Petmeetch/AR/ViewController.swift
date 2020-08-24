@@ -79,8 +79,15 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.snp.makeConstraints{(make) in
-            make.left.right.top.bottom.equalToSuperview()
+            make.left.right.top.bottom.equalTo(self.view)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
         }
+        upperControlsView.snp.makeConstraints{(make) in
+            make.left.right.top.equalToSuperview()
+            make.height.equalTo(170)
+        }        
+
         record()
         moodChange()
         //MARK: -互動鍵隱藏
