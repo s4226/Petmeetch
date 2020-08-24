@@ -286,17 +286,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dF-8j-lAf">
-                                <rect key="frame" x="323" y="73" width="39" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="DB4-BZ-V3C"/>
-                                    <constraint firstAttribute="width" constant="39" id="EkT-7I-yww"/>
-                                </constraints>
-                                <state key="normal" image="Loading"/>
-                                <connections>
-                                    <action selector="restartExperience:" destination="2EA-Bt-0S0" eventType="touchUpInside" id="Lie-eB-5l5"/>
-                                </connections>
-                            </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="dml-Vd-9lo">
                                 <rect key="frame" x="16" y="18" width="280" height="32"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dPX-Hf-Ykw">
@@ -342,15 +331,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Labrador" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-7p-GVF">
-                                <rect key="frame" x="317" y="113" width="50" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-7p-GVF">
+                                <rect key="frame" x="322" y="102" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="Q1u-Od-zzy"/>
-                                    <constraint firstAttribute="height" constant="50" id="qlh-zQ-cLz"/>
+                                    <constraint firstAttribute="height" constant="40" id="LsJ-qF-FIt"/>
+                                    <constraint firstAttribute="width" constant="40" id="VT5-R7-zdC"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtg-9K-6as">
-                                <rect key="frame" x="322" y="11" width="40" height="40"/>
+                                <rect key="frame" x="322" y="11" width="40" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CfV-Mx-oZ1"/>
                                     <constraint firstAttribute="height" constant="40" id="agZ-yD-pQB"/>
@@ -361,18 +350,29 @@
                                     <segue destination="uff-VF-Lku" kind="unwind" unwindAction="UnWindFor:" id="HF3-dn-bUz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dF-8j-lAf">
+                                <rect key="frame" x="323" y="55" width="39" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="1mY-bA-beY"/>
+                                    <constraint firstAttribute="height" constant="32" id="uze-Rr-1lj"/>
+                                </constraints>
+                                <state key="normal" image="Loading"/>
+                                <connections>
+                                    <action selector="restartExperience:" destination="2EA-Bt-0S0" eventType="touchUpInside" id="Lie-eB-5l5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2vp-aK-meW" firstAttribute="bottom" secondItem="SVT-7p-GVF" secondAttribute="bottom" constant="7" id="1uM-FC-iME"/>
-                            <constraint firstItem="SVT-7p-GVF" firstAttribute="top" secondItem="2dF-8j-lAf" secondAttribute="bottom" constant="8" id="316-za-r25"/>
+                            <constraint firstItem="2dF-8j-lAf" firstAttribute="top" secondItem="jtg-9K-6as" secondAttribute="bottom" constant="8" id="76t-ke-nz6"/>
                             <constraint firstItem="2vp-aK-meW" firstAttribute="trailing" secondItem="jtg-9K-6as" secondAttribute="trailing" constant="13" id="Azs-x3-5Vb"/>
                             <constraint firstItem="jtg-9K-6as" firstAttribute="leading" secondItem="dml-Vd-9lo" secondAttribute="trailing" constant="26" id="IDJ-Ej-VOL"/>
                             <constraint firstItem="jtg-9K-6as" firstAttribute="top" secondItem="2vp-aK-meW" secondAttribute="top" constant="11" id="IDv-f3-Ggr"/>
-                            <constraint firstItem="2dF-8j-lAf" firstAttribute="top" secondItem="jtg-9K-6as" secondAttribute="bottom" constant="22" id="P05-7M-5nW"/>
+                            <constraint firstItem="2vp-aK-meW" firstAttribute="trailing" secondItem="2dF-8j-lAf" secondAttribute="trailing" constant="13" id="P2v-51-jYL"/>
                             <constraint firstItem="dml-Vd-9lo" firstAttribute="leading" secondItem="2vp-aK-meW" secondAttribute="leading" constant="16" id="g4l-cP-PWa"/>
-                            <constraint firstItem="2vp-aK-meW" firstAttribute="trailing" secondItem="2dF-8j-lAf" secondAttribute="trailing" constant="13" id="jom-QJ-o5r"/>
-                            <constraint firstItem="2vp-aK-meW" firstAttribute="trailing" secondItem="SVT-7p-GVF" secondAttribute="trailing" constant="8" id="nfb-yy-CHo"/>
+                            <constraint firstItem="2vp-aK-meW" firstAttribute="trailing" secondItem="SVT-7p-GVF" secondAttribute="trailing" constant="13" id="nfb-yy-CHo"/>
+                            <constraint firstItem="SVT-7p-GVF" firstAttribute="top" secondItem="2dF-8j-lAf" secondAttribute="bottom" constant="15" id="yct-OQ-Nrw"/>
                             <constraint firstItem="dml-Vd-9lo" firstAttribute="top" secondItem="2vp-aK-meW" secondAttribute="top" constant="18" id="yre-hp-rZo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2vp-aK-meW"/>
@@ -1111,6 +1111,7 @@
         <image name="arrow" width="35" height="36"/>
         <image name="chevron.down" catalog="system" width="64" height="36"/>
         <image name="food" width="70" height="70"/>
+        <image name="happy" width="37" height="37"/>
         <image name="heart" width="64" height="64"/>
         <image name="imageView:Cwa-TV-iq8:image" width="25" height="33.5">
             <mutableData key="keyedArchiveRepresentation">

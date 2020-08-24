@@ -310,16 +310,16 @@ class ViewController: UIViewController{
             countlabel.text = "\(labradormoodcount)"
             if (labradormoodcount > 61)
             {
-                statusViewController.Petmood.image = UIImage(named: "Shiba")
+                statusViewController.Petmood.image = UIImage(named: "happy")
             }
             else if (labradormoodcount < 21)
             {
                 
-                statusViewController.Petmood.image = UIImage(named: "Chihuahua")
+                statusViewController.Petmood.image = UIImage(named: "sad")
             }
             else
             {
-                statusViewController.Petmood.image = UIImage(named: "arrow")
+                statusViewController.Petmood.image = UIImage(named: "smile")
             }
 
         }
@@ -328,16 +328,16 @@ class ViewController: UIViewController{
             countlabel.text = "\(goldenmoodcount)"
             if (goldenmoodcount > 61)
             {
-                statusViewController.Petmood.image = UIImage(named: "Shiba")
+                statusViewController.Petmood.image = UIImage(named: "happy")
             }
             else if (goldenmoodcount < 21)
             {
                 
-                statusViewController.Petmood.image = UIImage(named: "Chihuahua")
+                statusViewController.Petmood.image = UIImage(named: "sad")
             }
             else
             {
-                statusViewController.Petmood.image = UIImage(named: "arrow")
+                statusViewController.Petmood.image = UIImage(named: "smile")
             }
 
         }
