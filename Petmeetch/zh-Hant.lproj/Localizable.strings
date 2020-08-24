@@ -5,6 +5,8 @@
   Created by Peiru Chiu on 2020/8/24.
   Copyright © 2020 Peiru Chiu. All rights reserved.
 */
+"Choose From Library" = "從相簿匯入";
+"Take Photo" = "拍照";
 "zgolden" = "黃金獵犬";
 "Labrador" = "拉布拉多";
 "FIND A SURFACE TO PLACE YOUR PET" = "找到一個平面召喚您的寵物";
@@ -14,7 +16,7 @@
 "SURFACE DETECTED" = "平面檢測";
 "TAP + TO PLACE YOUR PET" = "召喚您的寵物";
 "The AR session failed." = "AR會話失敗";
-"CANNOT PLACE YOUR PET\nTry moving left or right." = "無法召喚您得寵物\n試著左右移動看看";
+"CANNOT PLACE YOUR PET\nTry moving left or right." = "無法召喚您的寵物\n試著左右移動看看";
 "Unexpected case: the update handler is always supposed to return at least one result." = "加載失敗";
 "Failed to load SCNScene from object.referenceURL" = "加載失敗";
 "Programmer error: Failed to lookup virtual pet in scene." = "程式錯誤: 尋找場景中的虛擬寵物失敗";

@@ -10,6 +10,11 @@ import UIKit
 
 class SelectionViewController: UIViewController {
     
+    @IBAction func matchTapped(_sender: Any){
+        self.performSegue(withIdentifier: "match", sender: self)
+
+    }
+    
 
     @IBAction func AdoptionTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "Adoption", sender: self)

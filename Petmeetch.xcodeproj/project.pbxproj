@@ -11,6 +11,11 @@
 		F73FCAFF24EEC9F30046D255 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73FCAFD24EEC9F30046D255 /* BaseViewController.swift */; };
 		F73FCB0024EEC9F30046D255 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73FCAFE24EEC9F30046D255 /* FavoriteViewController.swift */; };
 		F753949824F36F2900052668 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F753949A24F36F2900052668 /* Localizable.strings */; };
+		F75394A024F38AC600052668 /* threeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753949C24F38AC600052668 /* threeViewController.swift */; };
+		F75394A124F38AC600052668 /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753949D24F38AC600052668 /* DesignViewController.swift */; };
+		F75394A224F38AC600052668 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753949E24F38AC600052668 /* PhotoViewController.swift */; };
+		F75394A324F38AC600052668 /* fourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F753949F24F38AC600052668 /* fourViewController.swift */; };
+		F75394A524F38AF300052668 /* finaltest.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F75394A424F38AF300052668 /* finaltest.mlmodel */; };
 		F7AADE6524EA3AAF00BA4595 /* TelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AADE6424EA3AAF00BA4595 /* TelTableViewCell.swift */; };
 		F7AE253824E4095700A8C6B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE253724E4095700A8C6B5 /* AppDelegate.swift */; };
 		F7AE253A24E4095700A8C6B5 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AE253924E4095700A8C6B5 /* art.scnassets */; };
@@ -58,6 +63,11 @@
 		F753949224F36DEA00052668 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		F753949324F36DEB00052668 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F753949924F36F2900052668 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F753949C24F38AC600052668 /* threeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = threeViewController.swift; sourceTree = "<group>"; };
+		F753949D24F38AC600052668 /* DesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignViewController.swift; sourceTree = "<group>"; };
+		F753949E24F38AC600052668 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		F753949F24F38AC600052668 /* fourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fourViewController.swift; sourceTree = "<group>"; };
+		F75394A424F38AF300052668 /* finaltest.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = finaltest.mlmodel; sourceTree = "<group>"; };
 		F7AADE6424EA3AAF00BA4595 /* TelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelTableViewCell.swift; sourceTree = "<group>"; };
 		F7AE253424E4095700A8C6B5 /* Petmeetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Petmeetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AE253724E4095700A8C6B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +137,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F753949B24F3840F00052668 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				F75394A424F38AF300052668 /* finaltest.mlmodel */,
+				F753949D24F38AC600052668 /* DesignViewController.swift */,
+				F753949F24F38AC600052668 /* fourViewController.swift */,
+				F753949E24F38AC600052668 /* PhotoViewController.swift */,
+				F753949C24F38AC600052668 /* threeViewController.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
 		F7AE252B24E4095700A8C6B5 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F7CB0E5F24EFA7D700E3F6FD /* Assets.xcassets */,
+				F753949B24F3840F00052668 /* Photo */,
 				F7AE257024E4105700A8C6B5 /* AnimalAdoption */,
 				F7AE254D24E40B8700A8C6B5 /* AR */,
 				F7AE253724E4095700A8C6B5 /* AppDelegate.swift */,
@@ -376,12 +399,16 @@
 				F7AE257424E4112D00A8C6B5 /* CardView.swift in Sources */,
 				F7AE256224E40D7A00A8C6B5 /* VirtualObjectLoader.swift in Sources */,
 				F7AE258324E412B200A8C6B5 /* AnimalDetailTableViewCell.swift in Sources */,
+				F75394A124F38AC600052668 /* DesignViewController.swift in Sources */,
 				F7AADE6524EA3AAF00BA4595 /* TelTableViewCell.swift in Sources */,
 				F7AE256024E40D5700A8C6B5 /* VirtualObject.swift in Sources */,
 				F7AE257C24E4126100A8C6B5 /* Animal.swift in Sources */,
+				F75394A324F38AC600052668 /* fourViewController.swift in Sources */,
 				F7AE254C24E409B500A8C6B5 /* SelectionViewController.swift in Sources */,
+				F75394A524F38AF300052668 /* finaltest.mlmodel in Sources */,
 				F7AE256F24E40E7A00A8C6B5 /* Utilities.swift in Sources */,
 				F7AE256524E40DAE00A8C6B5 /* FocusSquare.swift in Sources */,
+				F75394A024F38AC600052668 /* threeViewController.swift in Sources */,
 				F7AE257724E4115D00A8C6B5 /* AnimalTableViewCell.swift in Sources */,
 				F7AE256C24E40E3F00A8C6B5 /* VirtualObjectSelection.swift in Sources */,
 				F7AE257F24E4128A00A8C6B5 /* AddresTableViewCell.swift in Sources */,
@@ -392,6 +419,7 @@
 				F7AE255724E40CA200A8C6B5 /* ViewController+CoachingOverlay.swift in Sources */,
 				F7AE255924E40CD500A8C6B5 /* VirtualObjectInteraction.swift in Sources */,
 				F73FCAFF24EEC9F30046D255 /* BaseViewController.swift in Sources */,
+				F75394A224F38AC600052668 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
