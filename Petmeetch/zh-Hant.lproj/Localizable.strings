@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Petmeetch
+
+  Created by Peiru Chiu on 2020/8/24.
+  Copyright © 2020 Peiru Chiu. All rights reserved.
+*/
+"zgolden" = "黃金獵犬";
+"Labrador" = "拉布拉多";
+"FIND A SURFACE TO PLACE YOUR PET" = "找到一個平面召喚您的寵物";
+"TRY MOVING LEFT OR RIGHT" = "試著左右移動";
+"Restart Session" = "重新啟動";
+"Your pet is having a good time!!!" = "您的寵物吃得很開心！！！";
+"SURFACE DETECTED" = "平面檢測";
+"TAP + TO PLACE YOUR PET" = "召喚您的寵物";
+"The AR session failed." = "AR會話失敗";
+"CANNOT PLACE YOUR PET\nTry moving left or right." = "無法召喚您得寵物\n試著左右移動看看";
+"Unexpected case: the update handler is always supposed to return at least one result." = "加載失敗";
+"Failed to load SCNScene from object.referenceURL" = "加載失敗";
+"Programmer error: Failed to lookup virtual pet in scene." = "程式錯誤: 尋找場景中的虛擬寵物失敗";
+"TRACKING UNAVAILABLE" = "追蹤失敗";
+"TRACKING NORMAL" = "追蹤正常";
+"TRACKING LIMITED\nExcessive motion" = "追蹤受限";
+"TRACKING LIMITED\nLow detail" = "追蹤受限";
+"Initializing" = "初始化";
+"Recovering from interruption" = "回復";
+"Unknown tracking state." = "未知的追蹤狀態";
+"Try slowing down your movement, or reset the session." = "試著放慢移動速度或重置";
+"Try pointing at a flat surface, or reset the session." = "試著定點在平面上或重置";
+"Return to the location where you left off or try resetting the session." = "回到你離開的位置或試著重置";

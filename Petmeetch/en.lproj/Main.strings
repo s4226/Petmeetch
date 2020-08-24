@@ -1,0 +1,96 @@
+
+/* Class = "UIButton"; normalTitle = "類別"; ObjectID = "8kB-pg-om7"; */
+"8kB-pg-om7.normalTitle" = "類別";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AT1-vx-OWF"; */
+"AT1-vx-OWF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BFx-ax-kCN"; */
+"BFx-ax-kCN.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "CRN-Tk-geT"; */
+"CRN-Tk-geT.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "重設篩選"; ObjectID = "DMJ-c6-Csw"; */
+"DMJ-c6-Csw.normalTitle" = "重設篩選";
+
+/* Class = "UIButton"; normalTitle = "縣市"; ObjectID = "GkV-Ym-jh3"; */
+"GkV-Ym-jh3.normalTitle" = "縣市";
+
+/* Class = "UIBarButtonItem"; title = "領養資訊"; ObjectID = "Lnu-mv-nZ8"; */
+"Lnu-mv-nZ8.title" = "領養資訊";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Lvm-ua-W4O"; */
+"Lvm-ua-W4O.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "體型"; ObjectID = "SsJ-TJ-1gT"; */
+"SsJ-TJ-1gT.normalTitle" = "體型";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "UO3-9F-gVh"; */
+"UO3-9F-gVh.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "VzB-ND-ywP"; */
+"VzB-ND-ywP.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Y8k-9e-qxz"; */
+"Y8k-9e-qxz.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YK4-rP-A61"; */
+"YK4-rP-A61.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "主選單"; ObjectID = "YO4-5M-GZp"; */
+"YO4-5M-GZp.title" = "主選單";
+
+/* Class = "UIBarButtonItem"; title = "領養資訊"; ObjectID = "Zk6-Mg-iap"; */
+"Zk6-Mg-iap.title" = "領養資訊";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aaC-9P-X3R"; */
+"aaC-9P-X3R.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "cP3-by-eqa"; */
+"cP3-by-eqa.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "篩選"; ObjectID = "dHK-VV-kev"; */
+"dHK-VV-kev.normalTitle" = "篩選";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dPZ-8F-qCE"; */
+"dPZ-8F-qCE.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "icv-D6-V7c"; */
+"icv-D6-V7c.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "AR寵物"; ObjectID = "jmE-Ha-cMO"; */
+"jmE-Ha-cMO.normalTitle" = "AR寵物";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lhB-tM-EDl"; */
+"lhB-tM-EDl.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "領養資訊"; ObjectID = "nee-oJ-PW2"; */
+"nee-oJ-PW2.normalTitle" = "領養資訊";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pCQ-8O-nwl"; */
+"pCQ-8O-nwl.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "聯絡收容中心"; ObjectID = "pt5-Ar-iPH"; */
+"pt5-Ar-iPH.normalTitle" = "聯絡收容中心";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qsB-2b-u5M"; */
+"qsB-2b-u5M.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vme-Xr-Z3d"; */
+"vme-Xr-Z3d.text" = "Label";
+
+/* Class = "UILabel"; text = "Tracking status"; ObjectID = "xCf-69-nO6"; */
+"xCf-69-nO6.text" = "Tracking status";
+
+/* Class = "UIButton"; normalTitle = "年齡"; ObjectID = "y9B-nu-gXI"; */
+"y9B-nu-gXI.normalTitle" = "年齡";
+
+/* Class = "UINavigationItem"; title = "關於浪浪"; ObjectID = "ygz-yF-ypM"; */
+"ygz-yF-ypM.title" = "關於浪浪";
+
+/* Class = "UIButton"; normalTitle = "性別"; ObjectID = "zoZ-Nz-bnf"; */
+"zoZ-Nz-bnf.normalTitle" = "性別";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zxH-rT-aLC"; */
+"zxH-rT-aLC.text" = "Label";
