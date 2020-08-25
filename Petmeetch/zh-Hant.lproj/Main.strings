@@ -81,7 +81,7 @@
 "vme-Xr-Z3d.text" = "Label";
 
 /* Class = "UILabel"; text = "Tracking status"; ObjectID = "xCf-69-nO6"; */
-"xCf-69-nO6.text" = "Tracking status";
+"xCf-69-nO6.text" = "追蹤狀態";
 
 /* Class = "UIButton"; normalTitle = "年齡"; ObjectID = "y9B-nu-gXI"; */
 "y9B-nu-gXI.normalTitle" = "年齡";

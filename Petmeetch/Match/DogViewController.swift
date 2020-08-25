@@ -8,7 +8,7 @@
 
 import UIKit
 
-class fourViewController: UIViewController {
+class DogViewController: UIViewController {
 
     
     @IBOutlet weak var place: UISegmentedControl!

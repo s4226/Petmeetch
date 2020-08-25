@@ -8,7 +8,7 @@
 
 import UIKit
 
-class threeViewController: UIViewController {
+class CatViewController: UIViewController {
 
     
     @IBOutlet weak var time: UISegmentedControl!

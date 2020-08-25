@@ -104,7 +104,7 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
                 self.loadAnimation(withKey: "getdown", sceneName: "art.scnassets/Labrador/LabradorGetDown", animationIdentifier: "LabradorGetDown-1")
                 
             }
-            if(virtualObject.modelName == "zgolden")
+            if(virtualObject.modelName == "Golden Retriever")
             {
                 // Load  the walking animation
                 self.loadAnimation(withKey: "Walking", sceneName: "art.scnassets/Labrador/LabradorWalking", animationIdentifier: "LabradorWalking-1")

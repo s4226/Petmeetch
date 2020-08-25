@@ -128,7 +128,7 @@ class ViewController: UIViewController{
                 }
 
             }
-            else if modelname == "zgolden"
+            else if modelname == "Golden Retriever"
             {
                 goldenmoodcount = goldenmoodcount - 5
                 if goldenmoodcount < 0
@@ -286,7 +286,8 @@ class ViewController: UIViewController{
         let now = Date()
         print("開始時間：\(now)")
         let interval = now.timeIntervalSince(lastTimeEndDate )
-        let time = interval / 60.0
+        //  計算經過多少30分鐘
+        let time = (interval / 60.0 ) / 30.0
         print("次數\(time)")
         labradormoodcount  = labradormoodcount - Int(time * 15)
 
@@ -323,7 +324,7 @@ class ViewController: UIViewController{
             }
 
         }
-        if modelname == "zgolden"
+        if modelname == "Golden Retriever"
         {
             countlabel.text = "\(goldenmoodcount)"
             if (goldenmoodcount > 61)
@@ -361,7 +362,7 @@ class ViewController: UIViewController{
                 countlabel.text = "\(labradormoodcount)"
                 moodChange()
             }
-            else if modelname == "zgolden"
+            else if modelname == "Golden Retriever"
             {
                 goldenmoodcount = goldenmoodcount + 15
                 if goldenmoodcount > 100
@@ -391,7 +392,7 @@ class ViewController: UIViewController{
             countlabel.text = "\(labradormoodcount)"
             moodChange()
         }
-        else if modelname == "zgolden"
+        else if modelname == "Golden Retriever"
         {
             goldenmoodcount = goldenmoodcount + 15
             if goldenmoodcount > 100
@@ -417,7 +418,7 @@ class ViewController: UIViewController{
             countlabel.text = "\(labradormoodcount)"
             moodChange()
         }
-        else if modelname == "zgolden"
+        else if modelname == "Golden Retriever"
         {
             goldenmoodcount = goldenmoodcount + 15
             if goldenmoodcount > 100
@@ -442,7 +443,7 @@ class ViewController: UIViewController{
             countlabel.text = "\(labradormoodcount)"
             moodChange()
         }
-        else if modelname == "zgolden"
+        else if modelname == "Golden Retriever"
         {
             goldenmoodcount = goldenmoodcount + 15
             if goldenmoodcount > 100
