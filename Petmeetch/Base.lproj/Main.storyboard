@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="主選單" translatesAutoresizingMaskIntoConstraints="NO" id="Chy-LN-V8F">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="主選單一_透明" translatesAutoresizingMaskIntoConstraints="NO" id="Chy-LN-V8F">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="zW5-ur-7MB">
@@ -108,7 +108,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="1" green="0.80784313730000001" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="zW5-ur-7MB" firstAttribute="centerY" secondItem="wgw-Ld-Cwa" secondAttribute="centerY" id="EjZ-S2-pp3"/>
                             <constraint firstItem="Chy-LN-V8F" firstAttribute="leading" secondItem="Mu5-3O-PaS" secondAttribute="leading" id="Gmd-w0-36Q"/>
@@ -527,7 +527,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt5-Ar-iPH">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                                    <color key="backgroundColor" red="1" green="0.81176470590000005" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Ou1-E1-yiY"/>
                                                     </constraints>
@@ -871,7 +871,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2U-yq-BqC">
-                                <rect key="frame" x="134" y="140" width="107" height="0.0"/>
+                                <rect key="frame" x="134" y="160" width="107" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -883,9 +883,9 @@
                         <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="GUZ-KI-sMU" firstAttribute="centerX" secondItem="gSv-a3-phF" secondAttribute="centerX" id="0a8-b1-06c"/>
-                            <constraint firstItem="E2U-yq-BqC" firstAttribute="leading" secondItem="ycn-eE-N5Y" secondAttribute="leading" constant="134" id="GUn-rM-jdl"/>
-                            <constraint firstItem="E2U-yq-BqC" firstAttribute="top" secondItem="ycn-eE-N5Y" secondAttribute="top" constant="140" id="Omb-JQ-I7r"/>
-                            <constraint firstItem="ycn-eE-N5Y" firstAttribute="trailing" secondItem="E2U-yq-BqC" secondAttribute="trailing" constant="134" id="UqR-bb-6kh"/>
+                            <constraint firstItem="GUZ-KI-sMU" firstAttribute="top" secondItem="E2U-yq-BqC" secondAttribute="bottom" constant="52.5" id="P2F-Q6-gl4"/>
+                            <constraint firstItem="E2U-yq-BqC" firstAttribute="leading" secondItem="ycn-eE-N5Y" secondAttribute="leading" constant="134" id="SRZ-pO-FDd"/>
+                            <constraint firstItem="ycn-eE-N5Y" firstAttribute="trailing" secondItem="E2U-yq-BqC" secondAttribute="trailing" constant="134" id="UOh-AA-NGr"/>
                             <constraint firstItem="GUZ-KI-sMU" firstAttribute="centerY" secondItem="gSv-a3-phF" secondAttribute="centerY" id="eWA-Bc-knw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ycn-eE-N5Y"/>
@@ -898,7 +898,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rao-3x-7ja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3898" y="959"/>
+            <point key="canvasLocation" x="3896.8000000000002" y="958.4707646176912"/>
         </scene>
         <!--Animal View Controller-->
         <scene sceneID="9pe-Q8-Nty">
@@ -1134,7 +1134,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="重設篩選">
-                                            <color key="titleColor" red="0.99819260840000001" green="0.8096542954" blue="0.72155189509999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="resetfilter:" destination="pvn-13-lli" eventType="touchUpInside" id="Ftp-1k-cvT"/>
@@ -1148,7 +1148,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="篩選">
-                                            <color key="titleColor" red="0.99819260840000001" green="0.8096542954" blue="0.72155189509999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="filterButton:" destination="pvn-13-lli" eventType="touchUpInside" id="vQ3-Q4-3VA"/>
@@ -1214,7 +1214,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="照相背景" translatesAutoresizingMaskIntoConstraints="NO" id="tO8-mH-igg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="拍照背景 (透明)" translatesAutoresizingMaskIntoConstraints="NO" id="tO8-mH-igg">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHR-rC-ELZ">
@@ -1254,7 +1254,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="56t-sI-mcO" firstAttribute="leading" secondItem="Rlo-bN-UXc" secondAttribute="leading" constant="66" id="6s0-XT-pSn"/>
                             <constraint firstItem="m60-BI-JkE" firstAttribute="top" secondItem="EHR-rC-ELZ" secondAttribute="bottom" constant="36" id="L2M-Ji-iBs"/>
@@ -1290,7 +1290,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="問卷背景" translatesAutoresizingMaskIntoConstraints="NO" id="Qaj-lM-4ra">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="問券背景 _透明" translatesAutoresizingMaskIntoConstraints="NO" id="Qaj-lM-4ra">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-9z-b9H">
@@ -1444,7 +1444,7 @@
                                 <rect key="frame" x="65" y="503" width="244" height="164"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="x0K-Fx-tME" firstAttribute="top" secondItem="NPe-VZ-woo" secondAttribute="bottom" constant="11" id="6lK-A5-lHQ"/>
                             <constraint firstItem="oLi-B3-9Tl" firstAttribute="leading" secondItem="opv-r5-vBz" secondAttribute="leading" constant="56" id="721-Zy-1uu"/>
@@ -1494,7 +1494,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="問卷背景" translatesAutoresizingMaskIntoConstraints="NO" id="MKK-8C-wHg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="問券背景 _透明" translatesAutoresizingMaskIntoConstraints="NO" id="MKK-8C-wHg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EY-Rw-Iat">
@@ -1627,7 +1627,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.81176470590000005" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CPm-cK-nBr" firstAttribute="trailing" secondItem="d98-wT-1RL" secondAttribute="trailing" constant="66" id="2CK-CL-d7q"/>
                             <constraint firstItem="2EY-Rw-Iat" firstAttribute="leading" secondItem="CPm-cK-nBr" secondAttribute="leading" constant="34" id="2Pz-e5-RsF"/>
@@ -1690,8 +1690,8 @@
         <image name="plus.rectangle.on.rectangle" catalog="system" width="64" height="48"/>
         <image name="sit" width="70" height="70"/>
         <image name="turn" width="70" height="70"/>
-        <image name="主選單" width="375" height="667"/>
-        <image name="問卷背景" width="375" height="667"/>
-        <image name="照相背景" width="375" height="667"/>
+        <image name="主選單一_透明" width="375" height="667"/>
+        <image name="問券背景 _透明" width="375" height="667"/>
+        <image name="拍照背景 (透明)" width="375" height="667"/>
     </resources>
 </document>

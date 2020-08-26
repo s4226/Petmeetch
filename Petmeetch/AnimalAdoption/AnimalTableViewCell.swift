@@ -27,7 +27,7 @@ class AnimalTableViewCell: UITableViewCell {
             sex.layer.cornerRadius = 7
             sex.clipsToBounds = true
             sex.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
-            sex.textColor = #colorLiteral(red: 0.2941176471, green: 0.3607843137, blue: 0.4784313725, alpha: 1)
+            sex.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             sex.textAlignment = .center
         }
         
@@ -43,7 +43,7 @@ class AnimalTableViewCell: UITableViewCell {
             bodytype.layer.cornerRadius = 7
             bodytype.clipsToBounds = true
             bodytype.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
-            bodytype.textColor = #colorLiteral(red: 0.2941176471, green: 0.3607843137, blue: 0.4784313725, alpha: 1)
+            bodytype.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             bodytype.textAlignment = .center
         }
 

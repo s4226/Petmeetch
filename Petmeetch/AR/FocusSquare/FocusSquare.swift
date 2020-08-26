@@ -38,10 +38,10 @@ class FocusSquare: SCNNode {
     // Duration of the open/close animation
     static let animationDuration = 0.7
     
-    static let primaryColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+    static let primaryColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
     
     // Color of the focus square fill.
-    static let fillColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+    static let fillColor = #colorLiteral(red: 1, green: 0.9254901961, blue: 0.4117647059, alpha: 1)
     
     // MARK: - Properties
     

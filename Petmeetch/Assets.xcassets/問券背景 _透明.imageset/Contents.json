@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "iPhone 6, 7, 8 – 17.png",
+      "filename" : "問券背景 _透明.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "iPhone 6, 7, 8 – 17@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "iPhone 6, 7, 8 – 17@3x.png",
       "scale" : "3x"
     }
   ],
