@@ -25,42 +25,60 @@ class CatViewController: UIViewController {
     
     @IBOutlet weak var btn: UIButton!
     
+    @IBOutlet weak var petlabel: UILabel!
     let screenSize: CGRect = UIScreen.main.bounds
     
     @IBAction func send(_ sender: Any) {
         btn.isHidden = false
+        petlabel.isHidden = false
         if time.selectedSegmentIndex == 0 && money.selectedSegmentIndex == 0 && allergic.selectedSegmentIndex == 0 &&  personality.selectedSegmentIndex == 0{
                     photo.image = UIImage(named: "cry")
+            petlabel.text = "你目前不適合養寵物"
                 }else if time.selectedSegmentIndex == 0 && money.selectedSegmentIndex == 0 && allergic.selectedSegmentIndex == 0 &&  personality.selectedSegmentIndex == 1{
                     photo.image = UIImage(named: "cry")
+            petlabel.text = "你目前不適合養寵物"
                 }else if time.selectedSegmentIndex == 0 && money.selectedSegmentIndex == 0 && allergic.selectedSegmentIndex == 1 &&  personality.selectedSegmentIndex == 0{
                     photo.image = UIImage(named: "cry")
+            petlabel.text = "你目前不適合養寵物"
                 }else if time.selectedSegmentIndex == 0 && money.selectedSegmentIndex == 0 && allergic.selectedSegmentIndex == 1 &&  personality.selectedSegmentIndex == 1{
                     photo.image = UIImage(named: "cry")
+            petlabel.text = "你目前不適合養寵物"
                 }else if time.selectedSegmentIndex == 0 && money.selectedSegmentIndex == 1 && allergic.selectedSegmentIndex == 0 &&  personality.selectedSegmentIndex == 0{
                     photo.image = UIImage(named: "波斯貓")
+            petlabel.text = "你適合養波斯貓"
                 }else if time.selectedSegmentIndex == 0 && money.selectedSegmentIndex == 1 && allergic.selectedSegmentIndex == 0 &&  personality.selectedSegmentIndex == 1{
                     photo.image = UIImage(named: "布偶貓")
+            petlabel.text = "你適合養布偶貓"
                 }else if time.selectedSegmentIndex == 0 && money.selectedSegmentIndex == 1 && allergic.selectedSegmentIndex == 1 &&  personality.selectedSegmentIndex == 0{
                     photo.image = UIImage(named: "俄羅斯藍貓")
+            petlabel.text = "你適合養俄羅斯藍貓"
                 }else if time.selectedSegmentIndex == 0 && money.selectedSegmentIndex == 1 && allergic.selectedSegmentIndex == 1 &&  personality.selectedSegmentIndex == 1{
                     photo.image = UIImage(named: "英國短毛貓")
+            petlabel.text = "你適合養英國短毛貓"
                 }else if time.selectedSegmentIndex == 1 && money.selectedSegmentIndex == 0 && allergic.selectedSegmentIndex == 0 &&  personality.selectedSegmentIndex == 0{
                     photo.image = UIImage(named: "cry")
+            petlabel.text = "你目前不適合養寵物"
                 }else if time.selectedSegmentIndex == 1 && money.selectedSegmentIndex == 0 && allergic.selectedSegmentIndex == 0 &&  personality.selectedSegmentIndex == 1{
                     photo.image = UIImage(named: "cry")
+            petlabel.text = "你目前不適合養寵物"
                 }else if time.selectedSegmentIndex == 1 && money.selectedSegmentIndex == 0 && allergic.selectedSegmentIndex == 1 &&  personality.selectedSegmentIndex == 0{
                     photo.image = UIImage(named: "cry")
+            petlabel.text = "你目前不適合養寵物"
                 }else if time.selectedSegmentIndex == 1 && money.selectedSegmentIndex == 0 && allergic.selectedSegmentIndex == 1 &&  personality.selectedSegmentIndex == 1{
                     photo.image = UIImage(named: "cry")
+            petlabel.text = "你目前不適合養寵物"
                 }else if time.selectedSegmentIndex == 1 && money.selectedSegmentIndex == 1 && allergic.selectedSegmentIndex == 0 &&  personality.selectedSegmentIndex == 0{
                     photo.image = UIImage(named: "西伯利亞貓")
+            petlabel.text = "你適合西伯利亞貓"
                 }else if time.selectedSegmentIndex == 1 && money.selectedSegmentIndex == 1 && allergic.selectedSegmentIndex == 0 &&  personality.selectedSegmentIndex == 1{
                     photo.image = UIImage(named: "緬因貓")
+            petlabel.text = "你適合養緬因貓"
                 }else if time.selectedSegmentIndex == 1 && money.selectedSegmentIndex == 1 && allergic.selectedSegmentIndex == 1 &&  personality.selectedSegmentIndex == 0{
                     photo.image = UIImage(named: "暹羅貓")
+            petlabel.text = "你適合養暹羅貓"
                 }else if time.selectedSegmentIndex == 1 && money.selectedSegmentIndex == 1 && allergic.selectedSegmentIndex == 1 &&  personality.selectedSegmentIndex == 1{
                     photo.image = UIImage(named: "美國短毛貓")
+            petlabel.text = "你適合養美國短毛貓"
                 }
 
 
