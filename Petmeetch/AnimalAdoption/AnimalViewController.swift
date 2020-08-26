@@ -484,7 +484,7 @@ extension AnimalViewController: UITableViewDataSource,UITableViewDelegate{
              cell.animalimage.kf.indicatorType = .activity
              cell.animalimage.kf.setImage(
                  with: imageUrl,
-                 placeholder: UIImage(named: "shiba-1"),
+                 placeholder: UIImage(named: "noimage"),
                  options: [
                      .processor(processor),
                      .scaleFactor(UIScreen.main.scale),
