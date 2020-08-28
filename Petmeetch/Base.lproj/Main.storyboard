@@ -143,6 +143,7 @@
                     <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y7i-uG-eUv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -871,13 +872,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2U-yq-BqC">
-                                <rect key="frame" x="134" y="160" width="107" height="0.0"/>
+                                <rect key="frame" x="134" y="159.5" width="107" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ragdoll" translatesAutoresizingMaskIntoConstraints="NO" id="GUZ-KI-sMU">
-                                <rect key="frame" x="92" y="212.5" width="191.5" height="242.5"/>
+                                <rect key="frame" x="92" y="212" width="191" height="243"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1187,7 +1188,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qtQ-Ov-ycc">
                         <barButtonItem key="backBarButtonItem" title="領養資訊" id="Zk6-Mg-iap">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
