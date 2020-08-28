@@ -33,7 +33,7 @@ class AnimalDetailViewController: UIViewController{
                 AnimalImage.kf.indicatorType = .activity
                     AnimalImage.kf.setImage(
             with: imageUrl,
-            placeholder: UIImage(named: "noimage"),
+            placeholder: UIImage(named: "largeimage"),
             options: [
                 .processor(processor),
                 .scaleFactor(UIScreen.main.scale),
