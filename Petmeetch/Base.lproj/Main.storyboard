@@ -316,7 +316,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Labrador" translatesAutoresizingMaskIntoConstraints="NO" id="5eW-aB-lDT">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5eW-aB-lDT">
                                                         <rect key="frame" x="17" y="2" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="GiH-5H-nfO"/>
@@ -1659,7 +1659,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Labrador" width="238" height="278"/>
         <image name="Loading" width="39" height="32"/>
         <image name="Note" width="27" height="33"/>
         <image name="Pen" width="42" height="42"/>
