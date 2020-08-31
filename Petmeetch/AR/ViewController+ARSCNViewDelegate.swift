@@ -30,7 +30,7 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 self.sitbutton.isHidden = false
                 self.getdownbutton.isHidden = false
                 self.statusViewController.Petmood.isHidden = false
-                self.countlabel.isHidden = false
+//                self.countlabel.isHidden = false
         
             }
             else{
@@ -41,7 +41,7 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
                 self.sitbutton.isHidden = true
                 self.getdownbutton.isHidden = true
                 self.statusViewController.Petmood.isHidden = true
-                self.countlabel.isHidden = true
+//                self.countlabel.isHidden = true
 
             }
 

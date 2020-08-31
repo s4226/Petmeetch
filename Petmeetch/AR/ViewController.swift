@@ -10,8 +10,10 @@ import UIKit
 import SceneKit
 import ARKit
 import SnapKit
+
 var labradormoodcount = 0
 var goldenmoodcount = 0
+var mixmoodcount = 0
 var lastTimeEndDate = Date()
 class ViewController: UIViewController{
     
@@ -29,9 +31,9 @@ class ViewController: UIViewController{
     
     var timer: Timer?
     
-//    @IBOutlet weak var petmood: UIImageView!
+    @IBOutlet weak var petmood: UIImageView!
     
-    @IBOutlet weak var countlabel: UILabel!
+//    @IBOutlet weak var countlabel: UILabel!
 
     let userDefaults = UserDefaults.standard
     
@@ -115,7 +117,22 @@ class ViewController: UIViewController{
         sceneView.addGestureRecognizer(tapGesture)
         timer =  Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
             self.moodChange()
+            if modelname == "Labrador" || modelname == "Golden Retriever"
+            {
+                self.sitbutton.setImage(UIImage(named: "sit"), for: .normal)
+                self.getdownbutton.setImage(UIImage(named: "lie"), for: .normal)
+                self.spinbutton.setImage(UIImage(named: "turn"), for: .normal)
+                self.feedbutton.setImage(UIImage(named: "food"), for: .normal)
+            }
+            else if modelname == "mix"
+            {
+                self.sitbutton.setImage(UIImage(named: "cat_sit"), for: .normal)
+                self.getdownbutton.setImage(UIImage(named: "cat_lie"), for: .normal)
+                self.spinbutton.setImage(UIImage(named: "cat_play"), for: .normal)
+                self.feedbutton.setImage(UIImage(named: "food"), for: .normal)
+            }
         }
+        
 
         timer =  Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { (timer) in
             
@@ -137,6 +154,14 @@ class ViewController: UIViewController{
                 }
 
             }
+            else if modelname == "mix"
+            {
+                mixmoodcount = mixmoodcount - 5
+                if mixmoodcount < 0
+                {
+                    mixmoodcount = 0
+                }
+            }
             self.moodChange()
         }
 
@@ -157,6 +182,7 @@ class ViewController: UIViewController{
         //儲存遊戲資料
         userDefaults.set(labradormoodcount, forKey: "labradormoodcount")
         userDefaults.set(goldenmoodcount, forKey: "goldenmoodcount")
+        userDefaults.set(mixmoodcount, forKey: "mixmoodcount")
         userDefaults.set(Date(), forKey: "EndDate")
         //        userDefaults.synchronize()
         if timer != nil {
@@ -281,6 +307,8 @@ class ViewController: UIViewController{
         print(labradormoodcount)
         goldenmoodcount = userDefaults.integer(forKey: "goldenmoodcount")
         print(goldenmoodcount)
+        mixmoodcount = userDefaults.integer(forKey: "mixmoodcount")
+        print(mixmoodcount)
         lastTimeEndDate = userDefaults.object(forKey: "EndDate") as? Date ?? Date()
         print("上次結束時間\(String(describing: lastTimeEndDate))")
         let now = Date()
@@ -301,6 +329,12 @@ class ViewController: UIViewController{
         {
             goldenmoodcount = 0
         }
+        mixmoodcount = mixmoodcount - Int(time * 15)
+        
+        if mixmoodcount < 0
+        {
+            mixmoodcount = 0
+        }
         moodChange()
     }
     //MARK: -寵物心情變化
@@ -308,7 +342,7 @@ class ViewController: UIViewController{
     {
         if modelname == "Labrador"
         {
-            countlabel.text = "\(labradormoodcount)"
+//            countlabel.text = "\(labradormoodcount)"
             if (labradormoodcount > 61)
             {
                 statusViewController.Petmood.image = UIImage(named: "happy")
@@ -326,7 +360,7 @@ class ViewController: UIViewController{
         }
         if modelname == "Golden Retriever"
         {
-            countlabel.text = "\(goldenmoodcount)"
+//            countlabel.text = "\(goldenmoodcount)"
             if (goldenmoodcount > 61)
             {
                 statusViewController.Petmood.image = UIImage(named: "happy")
@@ -342,7 +376,24 @@ class ViewController: UIViewController{
             }
 
         }
+        if modelname == "mix"
+        {
+//            countlabel.text = "\(mixmoodcount)"
+            if (mixmoodcount > 61)
+            {
+                statusViewController.Petmood.image = UIImage(named: "happy")
+            }
+            else if (mixmoodcount < 21)
+            {
+                
+                statusViewController.Petmood.image = UIImage(named: "sad")
+            }
+            else
+            {
+                statusViewController.Petmood.image = UIImage(named: "smile")
+            }
 
+        }
 
     }
 
@@ -359,7 +410,7 @@ class ViewController: UIViewController{
                 {
                     labradormoodcount = 100
                 }
-                countlabel.text = "\(labradormoodcount)"
+//                countlabel.text = "\(labradormoodcount)"
                 moodChange()
             }
             else if modelname == "Golden Retriever"
@@ -369,7 +420,17 @@ class ViewController: UIViewController{
                 {
                     goldenmoodcount = 100
                 }
-                countlabel.text = "\(goldenmoodcount)"
+//                countlabel.text = "\(goldenmoodcount)"
+                moodChange()
+            }
+            else if modelname == "mix"
+            {
+                mixmoodcount = mixmoodcount + 15
+                if mixmoodcount > 100
+                {
+                    mixmoodcount = 100
+                }
+//                countlabel.text = "\(mixmoodcount)"
                 moodChange()
             }
 
@@ -389,7 +450,7 @@ class ViewController: UIViewController{
             {
                 labradormoodcount = 100
             }
-            countlabel.text = "\(labradormoodcount)"
+//            countlabel.text = "\(labradormoodcount)"
             moodChange()
         }
         else if modelname == "Golden Retriever"
@@ -399,9 +460,20 @@ class ViewController: UIViewController{
             {
                 goldenmoodcount = 100
             }
-            countlabel.text = "\(goldenmoodcount)"
+//            countlabel.text = "\(goldenmoodcount)"
             moodChange()
         }
+        else if modelname == "mix"
+        {
+            mixmoodcount = mixmoodcount + 15
+            if mixmoodcount > 100
+            {
+                mixmoodcount = 100
+            }
+//            countlabel.text = "\(mixmoodcount)"
+            moodChange()
+        }
+
 
     }
     
@@ -415,7 +487,7 @@ class ViewController: UIViewController{
             {
                 labradormoodcount = 100
             }
-            countlabel.text = "\(labradormoodcount)"
+//            countlabel.text = "\(labradormoodcount)"
             moodChange()
         }
         else if modelname == "Golden Retriever"
@@ -425,9 +497,20 @@ class ViewController: UIViewController{
             {
                 goldenmoodcount = 100
             }
-            countlabel.text = "\(goldenmoodcount)"
+//            countlabel.text = "\(goldenmoodcount)"
             moodChange()
         }
+        else if modelname == "mix"
+        {
+//            mixmoodcount = mixmoodcount + 15
+            if mixmoodcount > 100
+            {
+                mixmoodcount = 100
+            }
+//            countlabel.text = "\(mixmoodcount)"
+            moodChange()
+        }
+
     }
     
     @IBAction func getdownbuttonTapped(_ sender: UIButton) {
@@ -440,7 +523,7 @@ class ViewController: UIViewController{
             {
                 labradormoodcount = 100
             }
-            countlabel.text = "\(labradormoodcount)"
+//            countlabel.text = "\(labradormoodcount)"
             moodChange()
         }
         else if modelname == "Golden Retriever"
@@ -450,9 +533,20 @@ class ViewController: UIViewController{
             {
                 goldenmoodcount = 100
             }
-            countlabel.text = "\(goldenmoodcount)"
+//            countlabel.text = "\(goldenmoodcount)"
             moodChange()
         }
+        else if modelname == "mix"
+        {
+            mixmoodcount = mixmoodcount + 15
+            if mixmoodcount > 100
+            {
+                mixmoodcount = 100
+            }
+//            countlabel.text = "\(mixmoodcount)"
+            moodChange()
+        }
+
     }
     
 }

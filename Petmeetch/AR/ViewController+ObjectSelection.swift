@@ -122,6 +122,17 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
                 self.loadAnimation(withKey: "getdown", sceneName: "art.scnassets/Labrador/LabradorGetDown", animationIdentifier: "LabradorGetDown-1")
                 
             }
+            if(virtualObject.modelName == "mix")
+            {
+                self.loadAnimation(withKey: "getdown", sceneName: "art.scnassets/Mix/mixGetDown", animationIdentifier: "mixGetDown-1")
+                self.loadAnimation(withKey: "sitdown", sceneName: "art.scnassets/Mix/mixsitdown", animationIdentifier: "mixsitdown-1")
+                self.loadAnimation(withKey: "spin", sceneName: "art.scnassets/Mix/mixPlaying", animationIdentifier: "mixPlaying-1")
+                self.loadAnimation(withKey: "eat", sceneName: "art.scnassets/Mix/mixEat", animationIdentifier: "mixEat-1")
+                self.loadAnimation(withKey: "Walking", sceneName: "art.scnassets/Mix/mixWalking", animationIdentifier: "mixWalking-1")
+
+
+                
+            }
 
             virtualObject.shouldUpdateAnchor = true
         }
