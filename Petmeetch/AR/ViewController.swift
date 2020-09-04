@@ -294,6 +294,12 @@ class ViewController: UIViewController{
         if hitResults.first != nil {
             if(idle) {
                 playAnimation(key: "Walking")
+                let billoardConstraint = SCNBillboardConstraint()
+                billoardConstraint.freeAxes = SCNBillboardAxis.Y
+                virtualObjectInteraction.selectedObject!.constraints = [billoardConstraint]
+                RunLoop.current.run(until:Date()+1)
+                virtualObjectInteraction.selectedObject?.constraints = []
+
                 
             }
             return
