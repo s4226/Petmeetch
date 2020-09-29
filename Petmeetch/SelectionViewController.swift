@@ -18,11 +18,11 @@ class SelectionViewController: UIViewController {
     
 
     @IBAction func AdoptionTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "Adoption", sender: self)
+        self.performSegue(withIdentifier: "AR", sender: self)
         
     }
     @IBAction func ARTapped(_ sender: Any){
-        self.performSegue(withIdentifier: "AR", sender: self)
+        self.performSegue(withIdentifier: "Adoption", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

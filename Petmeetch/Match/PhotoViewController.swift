@@ -30,7 +30,7 @@ class PhotoViewController: UIViewController {
     var image: UIImage?
     let vowels: [Character] = ["a", "e", "i", "o", "u"]
     var rlt: String?
-    
+    let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +82,7 @@ extension PhotoViewController {
                             let controller = self?.storyboard?.instantiateViewController(withIdentifier: "page2")
                             self?.present(controller!, animated: true, completion: nil)
                         }
+                        self!.userDefaults.set("狗 ", forKey: "type")
 
                     }else if let topResult = results.first{
                         if topResult.identifier.contains("Cat"){
@@ -90,6 +91,8 @@ extension PhotoViewController {
                                 let controller = self?.storyboard?.instantiateViewController(withIdentifier: "page3")
                                  self?.present(controller!, animated: true, completion: nil)
                             }
+                            self!.userDefaults.set("貓 ", forKey: "type")
+
                         }
                     }
             }
@@ -100,6 +103,8 @@ extension PhotoViewController {
                         }
 
                     }
+                    self!.userDefaults.set("類型", forKey: "type")
+
                 }
         }
     }
