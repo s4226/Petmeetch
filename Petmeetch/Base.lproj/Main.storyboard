@@ -894,7 +894,7 @@
         <scene sceneID="9pe-Q8-Nty">
             <objects>
                 <viewController storyboardIdentifier="One" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pvn-13-lli" customClass="AnimalViewController" customModule="Petmeetch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Isl-M6-xan">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Isl-M6-xan">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1002,7 +1002,7 @@
                                     <constraint firstItem="ecS-Ca-jNJ" firstAttribute="leading" secondItem="wS2-bs-TNP" secondAttribute="leading" id="y33-RQ-X5p"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COH-KB-4du">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COH-KB-4du">
                                 <rect key="frame" x="0.0" y="71" width="375" height="596"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>

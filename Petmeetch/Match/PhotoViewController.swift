@@ -187,6 +187,7 @@ extension PhotoViewController: UIImagePickerControllerDelegate & UINavigationCon
         imagePicker.sourceType = .camera
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
+        imagePicker.cameraFlashMode = UIImagePickerController.CameraFlashMode.off
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -218,7 +219,7 @@ extension PhotoViewController: UIImagePickerControllerDelegate & UINavigationCon
         
         let actPhoto =
             UIAlertAction(title: NSLocalizedString("Take Photo", comment: "Take Photo"),
-                                     style: .default,
+                          style: .default,
                                      handler: {
                                         _ in self.takePhotoWithCamera()
         })
