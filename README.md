@@ -12,6 +12,6 @@
 <img width="568" alt="截圖 2020-08-31 上午9 57 42" src="https://user-images.githubusercontent.com/58356514/113832047-cf25bc00-97ba-11eb-9758-c2690fe235e5.png">
 3.連接至地圖導航功能
 <img width="568" alt="截圖 2020-08-31 上午9 57 53" src="https://user-images.githubusercontent.com/58356514/113832007-c6cd8100-97ba-11eb-831a-14789c33c1e7.png">
-[APP介紹影片](https://www.youtube.com/watch?v=JnChPOcHaU8)
+[APP介紹影片](https://youtu.be/JnChPOcHaU8)
 
 [回到頂部](#readme)
